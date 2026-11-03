@@ -2,6 +2,7 @@ import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 import Field from "@/components/Field";
 import ChatChip from "@/components/ChatChip";
+import SmoothScroll from "@/components/SmoothScroll";
 import { graph } from "@/lib/graph";
 import { fieldLayout } from "@/lib/field-layout";
 import { VariantProvider } from "@/components/variant";
@@ -23,6 +24,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
       <main id="main">{children}</main>
       <SiteFooter />
       <ChatChip />
+      <SmoothScroll />
     </div>
     </VariantProvider>
   );
