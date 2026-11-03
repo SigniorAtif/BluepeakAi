@@ -16,7 +16,7 @@ gsap.registerPlugin(useGSAP, SplitText);
  *             size; a divider grows above it and the wordmark's halves ("BluePeak", "AI") appear
  *             at its ends
  *   arrival   the halves lift off along quarter-circle arcs to the nav, the divider crushing
- *             under them, and merge there with a small pulse
+ *             under them, and settle into place there
  *   launch    "automate." warms to the accent as the three words fly to their places in the
  *             headline; the field blooms out of the same moment
  *   settle    "Strategies that grow.", the lede, the buttons and the nav fade in
@@ -62,6 +62,13 @@ export default function HeroIntro() {
       return;
     }
 
+    // The intro measures the page from the top, so a reload must not restore an old scroll spot.
+    if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+    window.scrollTo({ top: 0, behavior: "instant" });
+    const restoreScroll = () => {
+      if ("scrollRestoration" in history) history.scrollRestoration = "auto";
+    };
+
     gsap.set(reveal, { autoAlpha: 0 });
     gsap.set(halves, { autoAlpha: 0 });
     gsap.set(line, { autoAlpha: 0 });
@@ -79,6 +86,7 @@ export default function HeroIntro() {
     let skipped = false;
     const skip = () => {
       skipped = true;
+      restoreScroll();
       tl?.progress(1);
       bloom();
       mark();
@@ -109,6 +117,7 @@ export default function HeroIntro() {
       tl = gsap.timeline({
         onComplete: () => {
           mark();
+          restoreScroll();
           gsap.set(anchors, { clearProps: "color" });
           gsap.set(box, { display: "none" });
           detach();
@@ -167,7 +176,6 @@ export default function HeroIntro() {
           },
           1.25,
         );
-        tl.to(logo, { scale: 1.08, duration: 0.14, ease: "power2.out" }, 2.45).to(logo, { scale: 1, duration: 0.7, ease: "expo.out" }, 2.59);
       } else {
         gsap.set(halves, { autoAlpha: 1 });
         gsap.set(logo, { autoAlpha: 0, y: -20 });
