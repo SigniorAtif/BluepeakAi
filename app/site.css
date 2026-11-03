@@ -207,18 +207,19 @@ html.js-intro .js-i-flip,html.js-intro .js-i-chars,html.js-intro .js-i-fade,html
 
 /* ---------- footer (from Orbit) ---------- */
 /* Orbit's footer ground: its sketched blossoms, cut out as a mask and drawn in the accent over a deep
-   accent-tinted ink, so the art follows the accent toggle. */
-.bp-foot{--foot-bg:color-mix(in oklab,var(--accent) 12%,#0B0B0D);--foot-art:.26;position:relative;z-index:2;isolation:isolate;overflow:hidden;margin-top:clamp(5rem,14vh,9rem);background:var(--foot-bg)}
+   accent-tinted ink, so the art follows the accent toggle. Like Orbit's, the art is pinned to the
+   viewport: the layer is fixed, and the footer's clip-path shows it only through the footer. */
+.bp-foot{--foot-bg:color-mix(in oklab,var(--accent) 12%,#0B0B0D);--foot-art:.26;position:relative;z-index:2;isolation:isolate;overflow:hidden;clip-path:inset(0);margin-top:clamp(5rem,14vh,9rem);background:var(--foot-bg)}
 [data-theme="light"] .bp-foot{--foot-bg:color-mix(in oklab,var(--accent) 7%,var(--paper-50));--foot-art:.22}
-.bp-foot::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:var(--accent);opacity:var(--foot-art);-webkit-mask:url(/brand/blossom.webp) center/cover no-repeat;mask:url(/brand/blossom.webp) center/cover no-repeat}
-.bp-footin{max-width:calc(var(--maxw) + 6rem);margin:0 auto;padding:clamp(2.5rem,4.5vw,4.5rem) clamp(1rem,4vw,3rem) 0}
+.bp-foot::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:var(--accent);opacity:var(--foot-art);-webkit-mask:url(/brand/blossom.webp) center/cover no-repeat;mask:url(/brand/blossom.webp) center/cover no-repeat}
+.bp-footin{max-width:calc(var(--maxw) + 6rem);margin:0 auto;padding:clamp(2rem,3.5vw,3.5rem) clamp(1rem,4vw,3rem) 0}
 .bp-mono{font:500 .625rem/1.4 var(--font-mono);letter-spacing:.2em;text-transform:uppercase}
 .bp-foot-rule{display:flex;align-items:center;gap:1rem;color:var(--text-faint)}
 .bp-foot-rule .end{color:var(--accent-text)}
 .bp-foot-rule .bar{flex:1;height:1px;background:var(--line-strong)}
 .bp-foot-rule .bp-logo{font-size:.9375rem}
 @media (max-width:640px){.bp-foot-rule .coords{display:none}}
-.bp-foot-grid{display:grid;gap:3rem clamp(2rem,6vw,7rem);margin-top:clamp(2rem,4vw,3.5rem);grid-template-columns:minmax(0,1.6fr) minmax(0,1fr)}
+.bp-foot-grid{display:grid;gap:3rem clamp(2rem,6vw,7rem);margin-top:clamp(1.75rem,3vw,2.75rem);grid-template-columns:minmax(0,1.6fr) minmax(0,1fr)}
 @media (max-width:960px){.bp-foot-grid{grid-template-columns:1fr}}
 .bp-foot-left{display:grid;align-content:start;gap:1.25rem}
 .bp-foot-left .bp-mono{color:var(--text-faint)}
@@ -229,9 +230,9 @@ html.js-intro .js-i-flip,html.js-intro .js-i-chars,html.js-intro .js-i-fade,html
 .bp-foot-links{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem}
 .bp-foot-links a{font:500 .875rem/1.4 var(--font-mono);letter-spacing:.06em;color:var(--text-muted);transition:color .2s}
 .bp-foot-links a:hover{color:var(--accent-text)}
-.bp-foot-right{display:grid;align-content:start;gap:2rem}
+.bp-foot-right{display:grid;align-content:start;gap:1.5rem}
 .bp-foot-nav{display:grid;border-top:1px solid var(--line-strong)}
-.bp-foot-nav a{display:flex;align-items:baseline;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--line-strong);color:var(--text);font-size:1.0625rem;transition:color .2s}
+.bp-foot-nav a{display:flex;align-items:baseline;gap:1rem;padding:.875rem 0;border-bottom:1px solid var(--line-strong);color:var(--text);font-size:1.0625rem;transition:color .2s}
 .bp-foot-nav a:hover{color:var(--accent-text)}
 .bp-foot-nav a .bp-mono{color:var(--accent-text)}
 .bp-foot-nav a .grow{flex:1}
@@ -242,12 +243,13 @@ html.js-intro .js-i-flip,html.js-intro .js-i-chars,html.js-intro .js-i-fade,html
 .bp-foot-status{display:flex;align-items:center;gap:.625rem;color:var(--text-muted)}
 .bp-foot-status i{width:.375rem;height:.375rem;border-radius:50%;background:var(--accent);animation:bp-shimmer 2.4s ease-in-out infinite}
 @keyframes bp-shimmer{50%{opacity:.35}}
-.bp-foot-base{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 1.5rem;margin-top:clamp(2.5rem,5vw,4.5rem);color:var(--text-faint)}
+.bp-foot-base{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 1.5rem;margin-top:clamp(2rem,4vw,3.5rem);color:var(--text-faint)}
 .bp-foot-base a{color:var(--text-faint)}
 .bp-foot-base a:hover{color:var(--accent-text)}
 .bp-foot-base .sep{display:flex;gap:1.25rem}
-.bp-footmark{overflow:hidden;margin-top:clamp(1rem,2.5vw,2rem);color:var(--accent)}
-.bp-footmark-in{display:flex;justify-content:center;padding-top:.08em;font:700 14.6vw/.7 var(--font-display);letter-spacing:-.025em;white-space:nowrap}
+/* The name, stretched tall from its base; the wrapper's top padding makes room for the stretch. */
+.bp-footmark{--stretch:1.4;overflow:hidden;margin-top:clamp(.75rem,2vw,1.5rem);padding-top:calc((var(--stretch) - 1) * .78em);font-size:14.6vw;color:var(--accent)}
+.bp-footmark-in{display:flex;justify-content:center;padding-top:.08em;font:700 1em/.7 var(--font-display);letter-spacing:-.025em;white-space:nowrap;transform:scaleY(var(--stretch));transform-origin:50% 100%}
 .bp-footmark-in .tail{color:var(--text)}
 .bp-footmark-in span{display:block}
 @media (prefers-reduced-motion:reduce){.bp-footmark-in span{transform:none !important}}
