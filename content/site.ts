@@ -131,12 +131,17 @@ export const services: {
   },
 ];
 
-export const process4 = [
-  { t: "Discover", d: "Understand your business, audience, goals and current challenges." },
-  { t: "Strategy", d: "Agree the right scope, priorities and success criteria." },
-  { t: "Build", d: "Create the experience, workflows and integrations your project needs." },
-  { t: "Launch & grow", d: "Launch carefully, learn from feedback, plan the next improvement." },
-];
+/** Home, below the services: their guiding principle, staged as scattered tools becoming one line. */
+export const principle = {
+  big: ["Not more tools.", "Better systems."] as [string, string],
+  lead: ["Useful first.", "Clever second."] as [string, string],
+  body: "Technology should solve a real business problem. We start with your goals, find the friction, and build what makes sense for your team.",
+  // The touchpoints a customer passes through, in journey order.
+  stops: ["Instagram", "Website", "Chatbot", "WhatsApp", "Follow-up", "CRM", "Customer"],
+};
+
+/** The line the home page leads into its services with. */
+export const servicesLead = "We connect your online presence, customer communication and everyday workflows, so your business can work smarter.";
 
 export const process5 = [
   { t: "Discover", d: "We talk through your business, audience, needs and what success should look like." },
@@ -395,12 +400,7 @@ export const heads: Record<"services" | "work" | "why-us" | "about" | "contact",
 };
 
 /** The closing band on each page. */
-export const ctas: Record<"home" | "services" | "work" | "why-us" | "about", Head> = {
-  home: {
-    kicker: "Have a project in mind?",
-    title: ["Let's make your next move", "your smartest one."],
-    lede: "Tell us what you want to improve. We'll talk through your goals, suggest a practical direction and share a tailored quote on a call.",
-  },
+export const ctas: Record<"services" | "work" | "why-us" | "about", Head> = {
   services: {
     kicker: "Start with a conversation",
     title: ["Not sure what", "your business needs?"],
@@ -465,4 +465,11 @@ export const legal = {
       { h: "WhatsApp automation", p: "What is possible with WhatsApp business APIs depends on the platform's approval and your use case, and is confirmed during scoping." },
     ],
   },
+};
+
+/** The home page's last words, written in by the scroll before the footer. */
+export const coda = {
+  // Set as these three lines on wide screens; phones wrap it naturally.
+  lines: ["Let's make your", "next move", "your smartest one."],
+  sign: ["Team BluePeak", "AI"] as [string, string],
 };
