@@ -223,7 +223,7 @@ export default function SiteField({ graphs, units }: { graphs: Island[]; units: 
       ptr.at = performance.now();
       if (!ptr.live) return;
       const t = e.target as Element | null;
-      const overUi = !!t?.closest("a:not(.bp-fieldtip),button,h1,p,nav,input,textarea,select,label,.bp-protobar");
+      const overUi = !!t?.closest("a:not(.bp-fieldtip),button,h1,p,nav,input,textarea,select,label");
       const hit = overUi ? -1 : nearest(ptr.x, ptr.y, 26);
       if (hit >= 0) focus = hit;
       else if (focus >= 0 && performance.now() - tourAt > 3200) focus = -1;

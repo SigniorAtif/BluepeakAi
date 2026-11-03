@@ -261,14 +261,6 @@ html.js-intro .js-i-flip,html.js-intro .js-i-chars,html.js-intro .js-i-fade,html
 .bp-chat i{width:.4375rem;height:.4375rem;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px var(--accent-tint)}
 @media (max-width:640px){.bp-chat span{display:none}.bp-chat{width:2.75rem;padding:0;justify-content:center}}
 
-/* ---------- prototype bar (throwaway) ---------- */
-.bp-protobar{position:fixed;left:50%;bottom:.75rem;z-index:90;transform:translateX(-50%);display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;white-space:nowrap;justify-content:center;max-width:calc(100vw - 2rem);padding:.5rem .625rem;border-radius:var(--radius-overlay);background:var(--surface-raised);border:1px solid var(--line-strong);box-shadow:var(--shadow-overlay);font:500 .75rem/1 var(--font-mono)}
-.bp-protobar b{color:var(--text-faint);font-weight:500;letter-spacing:.1em;text-transform:uppercase;font-size:.625rem}
-.bp-protobar .grp{display:flex;gap:.25rem;align-items:center}
-.bp-protobar button{padding:.375rem .5rem;border-radius:.5rem;color:var(--text-muted)}
-.bp-protobar button[data-on="1"]{background:var(--surface-hover);color:var(--text)}
-.bp-protobar button .dot{display:inline-block;width:.5rem;height:.5rem;border-radius:50%;margin-right:.375rem;vertical-align:middle}
-
 /* ---------- inner pages ---------- */
 .bp-phead{position:relative;z-index:2;display:flex;flex-direction:column;align-items:flex-start;gap:1.5rem;max-width:var(--maxw);margin:0 auto;padding:clamp(3rem,12vh,8rem) var(--gutter) 0;pointer-events:none}
 .bp-phead>*{pointer-events:auto}
