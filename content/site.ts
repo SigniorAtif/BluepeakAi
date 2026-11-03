@@ -362,3 +362,107 @@ export const budgets = [
 
 export type EnquiryServiceId = (typeof enquiryServices)[number]["id"];
 export type BudgetId = (typeof budgets)[number]["id"];
+
+/** Each inner page's opening: a kicker, a headline in two tones, and a lede. Their words. */
+export type Head = { kicker: string; title: [string, string]; lede: string };
+
+export const heads: Record<"services" | "work" | "why-us" | "about" | "contact", Head> = {
+  services: {
+    kicker: "Our services",
+    title: ["Build a stronger digital business", "from the ground up."],
+    lede: "Choose the support you need today, or combine services into one connected system. Every engagement starts with a conversation about your goals.",
+  },
+  work: {
+    kicker: "Selected work",
+    title: ["Digital experiences", "for businesses with ambition."],
+    lede: "Websites and demos across different industries, each designed around its audience, its offer and the next step it wants customers to take.",
+  },
+  "why-us": {
+    kicker: "Why BluePeakAI",
+    title: ["Not just a vendor.", "A growth-minded partner."],
+    lede: "Strategy, design and practical technology together: a sharper online presence, more thoughtful replies to customers, and systems that grow with you.",
+  },
+  about: {
+    kicker: "About BluePeakAI and its founder",
+    title: ["Good technology should make", "business feel simpler."],
+    lede: "BluePeakAI brings digital experiences, AI-powered workflows and customer communication together, to help businesses move forward with clarity.",
+  },
+  contact: {
+    kicker: "Let's talk",
+    title: ["Tell us what you're building.", "We'll help map the next step."],
+    lede: "Share a little about your business and goals. We'll use it to start a useful conversation and talk through a tailored quote on a call.",
+  },
+};
+
+/** The closing band on each page. */
+export const ctas: Record<"home" | "services" | "work" | "why-us" | "about", Head> = {
+  home: {
+    kicker: "Have a project in mind?",
+    title: ["Let's make your next move", "your smartest one."],
+    lede: "Tell us what you want to improve. We'll talk through your goals, suggest a practical direction and share a tailored quote on a call.",
+  },
+  services: {
+    kicker: "Start with a conversation",
+    title: ["Not sure what", "your business needs?"],
+    lede: "We'll understand how you work first and recommend a practical scope. Pricing is discussed on a call once we understand the project.",
+  },
+  work: {
+    kicker: "Your next project",
+    title: ["Let's build something", "worth showing."],
+    lede: "Tell us what your business needs. We'll map the right approach around your customers, goals and scope.",
+  },
+  "why-us": {
+    kicker: "Let's build with intention",
+    title: ["Your next stage deserves", "a better system."],
+    lede: "Tell us where you want to go. We'll help you explore a practical first step, without pressure or exaggerated promises.",
+  },
+  about: {
+    kicker: "Work with BluePeakAI",
+    title: ["Have an idea you want", "to bring to life?"],
+    lede: "Let's talk through the opportunity and work out a practical next step.",
+  },
+};
+
+export const difference = {
+  kicker: "The difference",
+  title: ["Built around your business,", "not a one-size-fits-all package."] as [string, string],
+  lede: "Good work starts with the right questions. We focus on what your customers need, what your team can maintain and what makes sense for your stage of growth.",
+};
+
+export const pointOfView = {
+  kicker: "Our point of view",
+  line: "Technology should create momentum.",
+  rest: "Not a pile of tools. Not complexity for its own sake. Just the right digital experience and systems for the next stage of your business.",
+};
+
+export const founderHead: [string, string] = ["Building with curiosity.", "Growing with purpose."];
+export const founderCoda = "Through BluePeakAI, I keep exploring how technology and entrepreneurship can come together to solve practical business challenges.";
+
+export const enquiryNote =
+  "This form doesn't store or email your details. It opens WhatsApp with your message filled in; review it and press Send. You can also email us directly.";
+
+/** Drafts for BluePeakAI to review before launch. Only what the site and their FAQ already say. */
+export const legal = {
+  privacy: {
+    title: "Privacy",
+    updated: "Draft, November 2026",
+    blocks: [
+      { h: "What this site collects", p: "Nothing about you is stored by this site. There are no analytics, no tracking pixels and no advertising cookies." },
+      { h: "The enquiry form", p: "The form never sends your details to us or to a server. It builds a WhatsApp message in your browser and opens WhatsApp, where you review it and choose whether to send it." },
+      { h: "WhatsApp and email", p: "Messages you send on WhatsApp are handled under Meta's terms and privacy policy. Emails you send reach our Gmail inbox and are handled under Google's. We use what you send only to reply and discuss your project." },
+      { h: "Preferences", p: "Your theme and accent choice are kept in your own browser's local storage so the site remembers them. They never leave your device." },
+      { h: "Questions", p: `Write to ${contact.email} about anything on this page.` },
+    ],
+  },
+  terms: {
+    title: "Terms",
+    updated: "Draft, November 2026",
+    blocks: [
+      { h: "Scope and quotes", p: "Every project is scoped and quoted individually, after a call about your requirements. Deliverables, responsibilities, timelines and pricing are agreed before the build begins." },
+      { h: "Payment", p: "50% in advance to start, and the balance before launch. Domain and hosting are billed separately." },
+      { h: "Projects on this site", p: "The work shown here includes concepts, demos and live client sites, each labelled as such. Links open sites hosted elsewhere." },
+      { h: "Results", p: "We build carefully and plan sensible next steps, but results depend on execution, market conditions and continued effort. Nothing on this site is a guarantee of business outcomes." },
+      { h: "WhatsApp automation", p: "What is possible with WhatsApp business APIs depends on the platform's approval and your use case, and is confirmed during scoping." },
+    ],
+  },
+};
