@@ -26,12 +26,12 @@ function islands(w: number, h: number, mode: Mode): { at: { cx: number; cy: numb
   // Order: hospitality, industrial, retail, healthcare, legal.
   if (mode === "split")
     return wide
-      ? { at: px([[0.32, 0.3, 0.15], [0.62, 0.62, 0.15], [0.2, 0.72, 0.12], [0.74, 0.24, 0.11], [0.47, 0.88, 0.08]], 0, w * 0.5), alpha: 0.85 }
-      : { at: px([[0.2, 0.12, 0.13], [0.55, 0.2, 0.15], [0.86, 0.1, 0.1], [0.4, 0.33, 0.08], [0.82, 0.32, 0.07]]), alpha: 0.5 };
+      ? { at: px([[0.3, 0.74, 0.12], [0.72, 0.82, 0.13], [0.5, 0.95, 0.08], [0.86, 0.64, 0.07], [0.14, 0.92, 0.06]], 0, w * 0.5), alpha: 0.8 }
+      : { at: px([[0.9, 0.1, 0.09], [0.98, 0.27, 0.1], [0.74, 0.05, 0.06], [0.84, 0.4, 0.05], [0.62, 0.13, 0.04]]), alpha: 0.4 };
   if (mode === "band")
     return wide
       ? { at: px([[0.66, 0.2, 0.12], [0.87, 0.36, 0.13], [0.55, 0.42, 0.09], [0.94, 0.12, 0.08], [0.76, 0.5, 0.06]]), alpha: 0.6 }
-      : { at: px([[0.2, 0.1, 0.12], [0.6, 0.16, 0.14], [0.9, 0.08, 0.09], [0.42, 0.3, 0.07], [0.85, 0.3, 0.06]]), alpha: 0.45 };
+      : { at: px([[0.9, 0.1, 0.09], [0.98, 0.27, 0.1], [0.74, 0.05, 0.06], [0.84, 0.4, 0.05], [0.62, 0.13, 0.04]]), alpha: 0.4 };
   return wide
     ? { at: px([[0.76, 0.31, 0.19], [0.84, 0.8, 0.18], [0.62, 0.83, 0.14], [0.92, 0.5, 0.12], [0.69, 0.56, 0.09]]), alpha: 1 }
     : { at: px([[0.24, 0.91, 0.12], [0.74, 0.92, 0.13], [0.5, 0.985, 0.07], [0.84, 0.13, 0.08], [0.6, 0.12, 0.05]]), alpha: 0.85 };
@@ -73,6 +73,7 @@ export default function SiteField({ graphs, units }: { graphs: Island[]; units: 
     if (!el || !box || !label || !ctx) return;
 
     const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const navH = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--nav-h")) * 16 || 72;
     const nodes: Node[] = [];
     const links: [number, number][] = [];
     const r = rng(42);
@@ -406,7 +407,8 @@ export default function SiteField({ graphs, units }: { graphs: Island[]; units: 
         const th = label.offsetHeight;
         const lx = f.x + 16 + tw <= w - 12 ? f.x + 16 : f.x - 16 - tw;
         const x = Math.min(Math.max(12, lx), w - tw - 12);
-        const y = Math.min(Math.max(12, f.y - th / 2), h - th - 12);
+        // Never under the nav, which overlaps the field's top edge.
+        const y = Math.min(Math.max(navH + 12, f.y - th / 2), h - th - 12);
         label.style.transform = `translate(${x}px, ${y}px)`;
       }
       showTip(alpha > 0.5 ? focus : -1);
