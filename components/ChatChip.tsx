@@ -1,33 +1,51 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import { MessageCircle } from "lucide-react";
 import { waLink } from "@/content/site";
 import { INTRO_DONE } from "./prefs";
 
-/**
- * Their main channel, always one tap away. Once per load its border pulses in the accent: after
- * the home intro when one plays, otherwise shortly after the page opens. Phones show an icon in
- * place of the label. It tucks away below the screen while the footer is up: the footer carries
- * the WhatsApp number itself, and the chip would otherwise sit on its name and links.
+/*
+ * Their main channel, always one tap away, except where it would sit on something: it tucks away
+ * below the screen while the home hero (which has its own call to action, and the field's caption
+ * in that corner) or the footer (which carries the WhatsApp number) is on screen. Once per load,
+ * the first time it is out after the intro (or shortly after a page opens without one), an accent
+ * highlight runs along its border. Phones show an icon in place of the label.
  */
-export default function ChatChip() {
-  const [pulse, setPulse] = useState(false);
-  const [away, setAway] = useState(false);
+const COVERS = [".bp-hero", ".bp-foot"];
 
+export default function ChatChip() {
+  const path = usePathname();
+  const [away, setAway] = useState(false);
+  const [pulse, setPulse] = useState(false);
+  // Read from observer and timer callbacks, which outlive any one render.
+  const awayNow = useRef(false);
+  const ready = useRef(false);
+  const tryPulse = () => {
+    if (ready.current && !awayNow.current) setPulse(true);
+  };
+
+  // Re-run per route: the hero only exists on the home page, and pages swap under the layout.
   useEffect(() => {
-    const foot = document.querySelector(".bp-foot");
-    if (!foot) return;
-    // Leaves as the footer's edge appears, so the two slide past each other.
-    const io = new IntersectionObserver(([e]) => setAway(e.isIntersecting));
-    io.observe(foot);
+    const seen = new Map<Element, boolean>();
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) seen.set(e.target, e.isIntersecting);
+      awayNow.current = [...seen.values()].some(Boolean);
+      setAway(awayNow.current);
+      tryPulse();
+    });
+    COVERS.forEach((s) => document.querySelectorAll(s).forEach((el) => io.observe(el)));
     return () => io.disconnect();
-  }, []);
+  }, [path]);
 
   useEffect(() => {
     let t: ReturnType<typeof setTimeout> | undefined;
     const go = (wait: number) => () => {
-      t = setTimeout(() => setPulse(true), wait);
+      t = setTimeout(() => {
+        ready.current = true;
+        tryPulse();
+      }, wait);
     };
     if ((window as unknown as { __bpIntroDue?: boolean }).__bpIntroDue) {
       const after = go(250);
