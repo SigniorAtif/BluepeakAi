@@ -1,13 +1,13 @@
 "use client";
 
-import { useEffect, useState, useSyncExternalStore } from "react";
+import { useEffect, useLayoutEffect, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "motion/react";
 import { ArrowUpRight, Menu, Moon, Sun, X } from "lucide-react";
 import { pages } from "@/content/site";
 import { Wordmark } from "./Wordmark";
-import { getAccent, getBlue, getTheme, originOf, setAccent, setTheme, subscribePrefs } from "./prefs";
+import { getAccent, getBlue, getTheme, originOf, restorePrefs, setAccent, setTheme, subscribePrefs } from "./prefs";
 import { glide } from "./motion";
 
 const links = pages.filter((p) => p.id !== "home" && p.id !== "contact");
@@ -52,6 +52,7 @@ export default function SiteNav() {
   const [open, setOpen] = useState(false);
   const [hover, setHover] = useState<string | null>(null);
 
+  useLayoutEffect(restorePrefs, []);
   useEffect(() => {
     const on = () => setScrolled(window.scrollY > 8);
     on();
@@ -59,7 +60,12 @@ export default function SiteNav() {
     return () => window.removeEventListener("scroll", on);
   }, []);
 
-  useEffect(() => setOpen(false), [path]);
+  // The sheet closes on navigation: reset during render when the path changes.
+  const [shownAt, setShownAt] = useState(path);
+  if (shownAt !== path) {
+    setShownAt(path);
+    setOpen(false);
+  }
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);

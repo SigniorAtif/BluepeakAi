@@ -33,6 +33,21 @@ const write = (k: string, v: string) => {
   } catch {}
 };
 
+/**
+ * The boot script's work again, for when React mounts <html> on the client (the 404 page does)
+ * and resets the theme and accent to the server's defaults.
+ */
+export function restorePrefs() {
+  const d = document.documentElement;
+  try {
+    d.dataset.theme = localStorage.getItem(THEME_KEY) === "light" ? "light" : "dark";
+    const blue = localStorage.getItem(BLUE_KEY) || DEFAULT_BLUE;
+    const q = new URLSearchParams(location.search).get("accent");
+    d.dataset.accent = q || (localStorage.getItem(ACCENT_KEY) === "ember" ? "ember" : blue);
+  } catch {}
+  window.dispatchEvent(new Event(EVENT));
+}
+
 export const getTheme = (): Theme => (typeof document !== "undefined" && document.documentElement.dataset.theme === "light" ? "light" : "dark");
 export const getAccent = (): Accent => (typeof document !== "undefined" ? ((document.documentElement.dataset.accent as Accent) ?? DEFAULT_BLUE) : DEFAULT_BLUE);
 export const getBlue = (): Blue => {
