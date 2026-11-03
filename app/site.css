@@ -206,16 +206,19 @@ html.js-intro .js-i-flip,html.js-intro .js-i-chars,html.js-intro .js-i-fade,html
 .bp-cta .bp-h2{max-width:18ch;font-size:clamp(2.25rem,1.2rem + 3.6vw,4.5rem)}
 
 /* ---------- footer (from Orbit) ---------- */
-.bp-foot{position:relative;z-index:2;overflow:hidden;margin-top:clamp(5rem,14vh,9rem);border-top:1px solid var(--line)}
-.bp-foot[data-variant="band"]{background:var(--surface);border-top-color:transparent}
-.bp-footin{max-width:calc(var(--maxw) + 6rem);margin:0 auto;padding:clamp(3rem,6vw,5.5rem) clamp(1rem,4vw,3rem) 0}
+/* Orbit's footer ground: its sketched blossoms, cut out as a mask and drawn in the accent over a deep
+   accent-tinted ink, so the art follows the accent toggle. */
+.bp-foot{--foot-bg:color-mix(in oklab,var(--accent) 12%,#0B0B0D);--foot-art:.26;position:relative;z-index:2;isolation:isolate;overflow:hidden;margin-top:clamp(5rem,14vh,9rem);background:var(--foot-bg)}
+[data-theme="light"] .bp-foot{--foot-bg:color-mix(in oklab,var(--accent) 7%,var(--paper-50));--foot-art:.22}
+.bp-foot::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:var(--accent);opacity:var(--foot-art);-webkit-mask:url(/brand/blossom.webp) center/cover no-repeat;mask:url(/brand/blossom.webp) center/cover no-repeat}
+.bp-footin{max-width:calc(var(--maxw) + 6rem);margin:0 auto;padding:clamp(2.5rem,4.5vw,4.5rem) clamp(1rem,4vw,3rem) 0}
 .bp-mono{font:500 .625rem/1.4 var(--font-mono);letter-spacing:.2em;text-transform:uppercase}
 .bp-foot-rule{display:flex;align-items:center;gap:1rem;color:var(--text-faint)}
 .bp-foot-rule .end{color:var(--accent-text)}
 .bp-foot-rule .bar{flex:1;height:1px;background:var(--line-strong)}
 .bp-foot-rule .bp-logo{font-size:.9375rem}
 @media (max-width:640px){.bp-foot-rule .coords{display:none}}
-.bp-foot-grid{display:grid;gap:3rem clamp(2rem,6vw,7rem);margin-top:clamp(2.5rem,5vw,4.5rem);grid-template-columns:minmax(0,1.6fr) minmax(0,1fr)}
+.bp-foot-grid{display:grid;gap:3rem clamp(2rem,6vw,7rem);margin-top:clamp(2rem,4vw,3.5rem);grid-template-columns:minmax(0,1.6fr) minmax(0,1fr)}
 @media (max-width:960px){.bp-foot-grid{grid-template-columns:1fr}}
 .bp-foot-left{display:grid;align-content:start;gap:1.25rem}
 .bp-foot-left .bp-mono{color:var(--text-faint)}
@@ -239,16 +242,15 @@ html.js-intro .js-i-flip,html.js-intro .js-i-chars,html.js-intro .js-i-fade,html
 .bp-foot-status{display:flex;align-items:center;gap:.625rem;color:var(--text-muted)}
 .bp-foot-status i{width:.375rem;height:.375rem;border-radius:50%;background:var(--accent);animation:bp-shimmer 2.4s ease-in-out infinite}
 @keyframes bp-shimmer{50%{opacity:.35}}
-.bp-foot-base{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 1.5rem;margin-top:clamp(3.5rem,8vw,7rem);color:var(--text-faint)}
+.bp-foot-base{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 1.5rem;margin-top:clamp(2.5rem,5vw,4.5rem);color:var(--text-faint)}
 .bp-foot-base a{color:var(--text-faint)}
 .bp-foot-base a:hover{color:var(--accent-text)}
 .bp-foot-base .sep{display:flex;gap:1.25rem}
-.bp-footmark{overflow:hidden;margin:.5rem 0 -4vw;color:var(--accent);opacity:.92}
-.bp-footmark-in{display:flex;justify-content:center;padding-top:.08em;font:700 14.4vw/.9 var(--font-display);letter-spacing:-.03em;white-space:nowrap}
+.bp-footmark{overflow:hidden;margin-top:clamp(1rem,2.5vw,2rem);color:var(--accent)}
+.bp-footmark-in{display:flex;justify-content:center;padding-top:.08em;font:700 14.6vw/.7 var(--font-display);letter-spacing:-.025em;white-space:nowrap}
 .bp-footmark-in .tail{color:var(--text)}
 .bp-footmark-in span{display:block}
 @media (prefers-reduced-motion:reduce){.bp-footmark-in span{transform:none !important}}
-@media (min-width:1500px){.bp-footmark-in{font-size:13.5rem}.bp-footmark{margin-bottom:-3.75rem}}
 
 /* ---------- floating WhatsApp chip ---------- */
 .bp-chat{position:fixed;right:clamp(1rem,3vw,1.75rem);bottom:clamp(1rem,3vw,1.75rem);z-index:35;display:inline-flex;align-items:center;gap:.5rem;height:2.75rem;padding:0 1rem 0 .875rem;border-radius:var(--radius-pill);border:1px solid var(--line-strong);background:color-mix(in oklab,var(--surface-raised) 90%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--text);font:500 .8125rem/1 var(--font-sans);box-shadow:var(--shadow-overlay);transition:border-color .2s,transform .3s var(--ease-expo)}
