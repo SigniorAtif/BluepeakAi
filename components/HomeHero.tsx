@@ -20,12 +20,12 @@ export default function HomeHero() {
           <span className="js-i-flip">Ideas</span> <span className="js-i-flip">that</span> <span className="js-i-flip hl">automate.</span>{" "}
           <span className="js-i-chars">Strategies that grow.</span>
         </h1>
-        <div className="bp-hero-row">
-        <p className="bp-lede js-i-fade">
+        <div className="bp-hero-row js-i-fade">
+        <p className="bp-lede">
           We build websites, AI-powered systems and smarter customer journeys that help businesses win more enquiries, save time and grow with
           confidence.
         </p>
-        <div className="bp-ctas js-i-fade">
+        <div className="bp-ctas">
           <Link href="/contact" className="bp-btn primary lg">
             Let&apos;s build something <ArrowUpRight size={17} className="nudge" />
           </Link>
@@ -36,7 +36,11 @@ export default function HomeHero() {
         </div>
         <p className="bp-hero-foot js-i-fade">Strategy-led. Built around your business. Designed to scale.</p>
       </header>
-      {variant === "c" && <Marquee items={services.map((s) => s.short)} />}
+      {variant === "c" && (
+        <div className="js-i-fade">
+          <Marquee items={services.map((s) => s.short)} />
+        </div>
+      )}
     </>
   );
 }

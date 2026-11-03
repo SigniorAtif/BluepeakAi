@@ -141,7 +141,8 @@ export default function HeroIntro() {
         gsap.set(logo, { y: wrapDY, scale: S, transformOrigin: "50% 50%" });
         gsap.set(a, { x: aDX });
         gsap.set(b, { x: bDX });
-        gsap.set(line, { top: rowY, left: vw / 2, xPercent: -50, width: lineW, scaleX: 0, autoAlpha: 1 });
+        // The halves differ in width, so the divider sits in the gap between them, not on the centre.
+        gsap.set(line, { top: rowY, left: left + ra.width * S + pad, width: lineW, scaleX: 0, autoAlpha: 1 });
 
         tl.to(line, { scaleX: 1, duration: 0.65, ease: "power2.inOut" }, 0).to(halves, { autoAlpha: 1, duration: 0.5, ease: "power1.out" }, 0.65);
 

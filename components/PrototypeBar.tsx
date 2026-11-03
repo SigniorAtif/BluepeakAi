@@ -9,7 +9,8 @@
  *   B  journey graph    touchpoints, with enquiries travelling between them
  *   C  type only        no canvas; the headline and a scroll-driven marquee
  */
-import { setVariant, useVariant, type Variant } from "./variant";
+import { useRouter } from "next/navigation";
+import { useVariant, VARIANT_COOKIE, type Variant } from "./variant";
 import { setAccent, type Accent } from "./prefs";
 import { usePrefs } from "./SiteNav";
 
@@ -27,6 +28,11 @@ const ACCENTS: { id: Accent; hex: string }[] = [
 
 export default function PrototypeBar() {
   const variant = useVariant();
+  const router = useRouter();
+  const setVariant = (v: Variant) => {
+    document.cookie = `${VARIANT_COOKIE}=${v}; path=/; max-age=31536000; samesite=lax`;
+    router.refresh();
+  };
   const { accent } = usePrefs();
   return (
     <div className="bp-protobar" role="toolbar" aria-label="Prototype controls">

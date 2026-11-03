@@ -32,7 +32,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script dangerouslySetInnerHTML={{ __html: BOOT }} />
         <script dangerouslySetInnerHTML={{ __html: INTRO_GUARD }} />
       </head>
-      <body>
+      {/* Browser extensions (Grammarly) write attributes onto <body> before React hydrates. */}
+      <body suppressHydrationWarning>
         <a href="#main" className="skip">
           Skip to content
         </a>
