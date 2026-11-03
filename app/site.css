@@ -486,14 +486,11 @@ html.js-intro .js-i-flip,html.js-intro .js-i-chars,html.js-intro .js-i-fade,html
   ::view-transition-new(bp-field),::view-transition-group(bp-field){animation:none}
   ::view-transition-old(bp-nav){display:none}
   ::view-transition-new(bp-nav),::view-transition-group(bp-nav){animation:none}
-  ::view-transition-old(.bp-page-out){animation:bp-page-out .36s cubic-bezier(.4,0,.6,1) both}
-  ::view-transition-new(.bp-page-in){animation:bp-page-in .5s var(--ease-out) .24s both}
+  ::view-transition-old(.bp-page-out){animation:bp-page-out .45s var(--ease-io) both}
+  ::view-transition-new(.bp-page-in){animation:bp-page-in .8s var(--ease-expo) .18s both}
 }
-/* The old page lifts away (gone by two thirds in); the new one fades in while its headline rises (PageReveal). */
-@keyframes bp-page-out{65%{opacity:0}to{opacity:0;transform:translateY(-2.5rem)}}
-/* PageReveal's line masks: room below for descenders, so g and p aren't clipped as lines rise. */
-.bp-rline-mask{padding-bottom:.16em;margin-bottom:-.16em}
-@keyframes bp-page-in{from{opacity:0}}
+@keyframes bp-page-out{to{opacity:0;transform:translateX(-6%);filter:blur(6px)}}
+@keyframes bp-page-in{from{opacity:0;transform:translateY(24px);filter:blur(6px)}}
 html.bp-swapping::view-transition-old(root){animation:none}
 html.bp-swapping::view-transition-new(root){animation:bp-reveal .7s var(--ease-io) both}
 @keyframes bp-reveal{from{clip-path:circle(0 at var(--sx,50%) var(--sy,0))}to{clip-path:circle(var(--sr,150vmax) at var(--sx,50%) var(--sy,0))}}
