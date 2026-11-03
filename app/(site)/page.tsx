@@ -41,7 +41,6 @@ export default function Home() {
             <h2 className="bp-h2">
               Built for different <span className="dim">business needs.</span>
             </h2>
-            <p>Websites and demos across different industries. Open any of them to see it live.</p>
           </div>
           <Link href="/work" className="bp-btn secondary">
             All eight projects <ArrowRight size={16} />

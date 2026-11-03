@@ -178,7 +178,7 @@ html.js-intro .js-i-flip,html.js-intro .js-i-chars,html.js-intro .js-i-fade,html
 }
 
 /* ---------- home: selected work ---------- */
-/* The usual section head, with the way to all the work level with its last line on the right. */
+/* The usual section head, with the way to all the work level with the headline's last line. */
 .bp-work-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1.5rem 3rem}
 .bp-work-head .bp-btn{margin-bottom:.125rem}
 
