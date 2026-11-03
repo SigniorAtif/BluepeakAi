@@ -1,0 +1,53 @@
+/*
+ * BluePeakAI tokens. Crambook's warm ink and paper, unchanged; one accent, picked by
+ * html[data-accent]. Dark is the default; [data-theme="light"] is paper, the same palette inverted.
+ */
+:root{
+  --ink-950:#0F0E0D;--ink-900:#171514;--ink-850:#1F1D1B;--ink-800:#282624;--ink-750:#2C2A27;--ink-700:#3D3A37;--ink-500:#7D7873;--ink-300:#A8A29C;--ink-50:#F2EFEC;
+  --paper-0:#FFFFFF;--paper-50:#F7F5F2;--paper-100:#F0EDE9;--paper-200:#E6E2DD;--paper-300:#D4CFC9;--paper-500:#8A847E;--paper-700:#5C5752;--paper-950:#1A1816;
+
+  --bg:var(--ink-950);--surface:var(--ink-900);--surface-raised:var(--ink-850);--surface-hover:var(--ink-800);
+  --line:var(--ink-750);--line-strong:var(--ink-700);
+  --field-line:var(--ink-700);--field-dot:var(--ink-500);
+  --text:var(--ink-50);--text-muted:var(--ink-300);--text-faint:var(--ink-500);
+
+  --font-sans:var(--font-geist),system-ui,-apple-system,'Segoe UI',sans-serif;
+  --font-mono:var(--font-geist-mono),ui-monospace,'SF Mono',Menlo,monospace;
+  --radius-control:10px;--radius-card:12px;--radius-overlay:16px;--radius-pill:999px;
+  --shadow-overlay:0 16px 40px -8px rgba(0,0,0,.6),0 2px 6px rgba(0,0,0,.4);
+  --ease-out:cubic-bezier(.2,.8,.2,1);--ease-expo:cubic-bezier(.16,1,.3,1);--ease-io:cubic-bezier(.65,0,.35,1);
+  --gutter:clamp(1rem,5vw,4rem);--maxw:84rem;--nav-h:4.5rem;
+  color-scheme:dark;
+}
+[data-theme="light"]{
+  --bg:var(--paper-50);--surface:var(--paper-0);--surface-raised:var(--paper-0);--surface-hover:var(--paper-100);
+  --line:var(--paper-200);--line-strong:var(--paper-300);
+  --field-line:var(--paper-300);--field-dot:var(--paper-500);
+  --text:var(--paper-950);--text-muted:var(--paper-700);--text-faint:var(--paper-500);
+  --shadow-overlay:0 16px 40px -8px rgba(26,24,22,.12),0 2px 6px rgba(26,24,22,.08);
+  color-scheme:light;
+}
+
+/* The one accent. Every value passes WCAG AA as text on the page and as a button fill. */
+:root,[data-accent="glacier"]{--accent:#86AFD9;--accent-hover:#A3C4E6;--accent-text:#A3C4E6;--accent-tint:#16202B;--on-accent:#0B1622}
+[data-accent="cobalt"]{--accent:#4A63F0;--accent-hover:#6479F5;--accent-text:#94A6FF;--accent-tint:#151A33;--on-accent:#FFFFFF}
+[data-accent="dusk"]{--accent:#8C92E0;--accent-hover:#A3A8EA;--accent-text:#B0B5F0;--accent-tint:#1B1C2E;--on-accent:#0E0F22}
+[data-accent="ember"]{--accent:#E0561C;--accent-hover:#E8723A;--accent-text:#E8723A;--accent-tint:#2B170E;--on-accent:#140904}
+[data-theme="light"],[data-theme="light"][data-accent="glacier"]{--accent:#2C5A88;--accent-hover:#234A70;--accent-text:#2C5A88;--accent-tint:#E6EEF6;--on-accent:#FFFFFF}
+[data-theme="light"][data-accent="cobalt"]{--accent:#2A42C8;--accent-hover:#2236A6;--accent-text:#2A42C8;--accent-tint:#E8EBFB;--on-accent:#FFFFFF}
+[data-theme="light"][data-accent="dusk"]{--accent:#4A50A6;--accent-hover:#3D4290;--accent-text:#4A50A6;--accent-tint:#ECEDF8;--on-accent:#FFFFFF}
+[data-theme="light"][data-accent="ember"]{--accent:#C4440F;--accent-hover:#9C360D;--accent-text:#C4440F;--accent-tint:#FDF1EA;--on-accent:#FFFFFF}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:clip}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-sans);-webkit-font-smoothing:antialiased;overflow-x:clip}
+*{scrollbar-width:thin;scrollbar-color:color-mix(in oklab,var(--text-faint) 60%,transparent) transparent}
+a{color:var(--accent-text);text-decoration:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer;padding:0}
+input,select,textarea{font:inherit;color:inherit}
+::selection{background:var(--accent-tint);color:var(--text)}
+img{max-width:100%;display:block}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip{position:fixed;left:1rem;top:-4rem;z-index:100;padding:.75rem 1rem;border-radius:var(--radius-control);background:var(--surface-raised);color:var(--text);transition:top .2s var(--ease-out)}
+.skip:focus{top:1rem}
