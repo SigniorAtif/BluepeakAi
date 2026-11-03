@@ -35,19 +35,19 @@ export default function Home() {
       <ServicePoster />
       <SystemScene />
       <section className="bp-sec" id="work">
-        <div className="bp-sechead">
-          <span className="bp-kicker">Selected work</span>
-          <h2 className="bp-h2">
-            Built for different <span className="dim">business needs.</span>
-          </h2>
-          <p>Websites and demos across different industries. Open any of them to see it live.</p>
-        </div>
-        <WorkRows items={picks} />
-        <div>
+        <div className="bp-work-head">
+          <div className="bp-sechead">
+            <span className="bp-kicker">Selected work</span>
+            <h2 className="bp-h2">
+              Built for different <span className="dim">business needs.</span>
+            </h2>
+            <p>Websites and demos across different industries. Open any of them to see it live.</p>
+          </div>
           <Link href="/work" className="bp-btn secondary">
             All eight projects <ArrowRight size={16} />
           </Link>
         </div>
+        <WorkRows items={picks} />
       </section>
       <Coda />
     </Page>

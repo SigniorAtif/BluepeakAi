@@ -177,6 +177,11 @@ html.js-intro .js-i-flip,html.js-intro .js-i-chars,html.js-intro .js-i-fade,html
   .bp-sys-run{display:none}
 }
 
+/* ---------- home: selected work ---------- */
+/* The usual section head, with the way to all the work level with its last line on the right. */
+.bp-work-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1.5rem 3rem}
+.bp-work-head .bp-btn{margin-bottom:.125rem}
+
 /* ---------- home: the last word ---------- */
 .bp-coda{position:relative;z-index:2;height:200vh}
 .bp-coda-pin{position:fixed;inset:0;z-index:1;display:flex;align-items:center;justify-content:center;padding:0 var(--gutter);pointer-events:none}
