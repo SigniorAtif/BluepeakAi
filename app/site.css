@@ -259,13 +259,11 @@ html.js-intro .js-i-flip,html.js-intro .js-i-chars,html.js-intro .js-i-fade,html
 .bp-chat{position:fixed;right:clamp(1rem,3vw,1.75rem);bottom:clamp(1rem,3vw,1.75rem);z-index:35;display:inline-flex;align-items:center;gap:.5rem;height:2.75rem;padding:0 1.125rem;border-radius:var(--radius-pill);border:1px solid var(--line-strong);background:color-mix(in oklab,var(--surface-raised) 90%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--text);font:500 .8125rem/1 var(--font-sans);box-shadow:var(--shadow-overlay);transition:border-color .2s,transform .3s var(--ease-expo)}
 .bp-chat:hover{border-color:var(--accent);transform:translateY(-2px)}
 .bp-chat-ic{display:none}
-/* One accent pulse of the border, with a ring easing out from it, once per load. */
-.bp-chat[data-pulse="1"]{animation:bp-chat-pulse 1.8s var(--ease-out)}
-@keyframes bp-chat-pulse{
-  0%{border-color:var(--line-strong);box-shadow:var(--shadow-overlay),0 0 0 0 color-mix(in oklab,var(--accent) 55%,transparent)}
-  25%,65%{border-color:var(--accent)}
-  100%{border-color:var(--line-strong);box-shadow:var(--shadow-overlay),0 0 0 .75rem color-mix(in oklab,var(--accent) 0%,transparent)}
-}
+/* Once per load, an accent highlight runs along the border from left to right. The layer is the
+   border ring only: a 1px padding box with its content masked out. */
+.bp-chat::before{content:"";position:absolute;inset:-1.5px;z-index:1;padding:1.5px;border-radius:inherit;pointer-events:none;opacity:0;background:linear-gradient(90deg,transparent,var(--accent) 30% 70%,transparent) no-repeat;background-size:60% 100%;background-position:-100% 0;-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude}
+.bp-chat[data-pulse="1"]::before{animation:bp-chat-sweep 1.6s var(--ease-io)}
+@keyframes bp-chat-sweep{from{opacity:1;background-position:-100% 0}to{opacity:1;background-position:200% 0}}
 @media (max-width:640px){.bp-chat span{display:none}.bp-chat-ic{display:block}.bp-chat{width:2.75rem;padding:0;justify-content:center}}
 
 /* ---------- inner pages ---------- */
