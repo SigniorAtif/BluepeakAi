@@ -5,7 +5,7 @@
  * sub-shape A), plus the three blue candidates and ember. Pick one of each, then delete this bar,
  * variant.ts and the losing fields.
  *
- *   A  contour peak     the mountain, with the route climbing through the four steps
+ *   A  project dots     every section of their eight live sites, one island per industry
  *   B  journey graph    touchpoints, with enquiries travelling between them
  *   C  type only        no canvas; the headline and a scroll-driven marquee
  */
@@ -15,7 +15,7 @@ import { setAccent, type Accent } from "./prefs";
 import { usePrefs } from "./SiteNav";
 
 const VARIANTS: { id: Variant; label: string }[] = [
-  { id: "a", label: "A peak" },
+  { id: "a", label: "A dots" },
   { id: "b", label: "B journey" },
   { id: "c", label: "C type" },
 ];

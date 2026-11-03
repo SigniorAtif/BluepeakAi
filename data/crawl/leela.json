@@ -1,0 +1,233 @@
+{
+ "url": "https://leela-jewellery.vercel.app/",
+ "title": "Leela Jewels Surat | Fine Diamond, Gold & Bridal Jewellery",
+ "items": [
+  {
+   "tag": "h1",
+   "text": "JEWELLERY THAT BECOMES A MEMORY.",
+   "id": "top"
+  },
+  {
+   "tag": "h2",
+   "text": "MORE THAN JEWELLERY. A PART OF YOUR STORY.",
+   "id": "story"
+  },
+  {
+   "tag": "h2",
+   "text": "DISCOVER YOUR SIGNATURE",
+   "id": "collections"
+  },
+  {
+   "tag": "h3",
+   "text": "DIAMONDS",
+   "id": "collections"
+  },
+  {
+   "tag": "h3",
+   "text": "GOLD",
+   "id": "collections"
+  },
+  {
+   "tag": "h3",
+   "text": "POLKI",
+   "id": "collections"
+  },
+  {
+   "tag": "h3",
+   "text": "JADAU",
+   "id": "collections"
+  },
+  {
+   "tag": "h3",
+   "text": "KUNDAN",
+   "id": "collections"
+  },
+  {
+   "tag": "h3",
+   "text": "WEDDING JEWELLERY",
+   "id": "collections"
+  },
+  {
+   "tag": "h2",
+   "text": "WHERE EVERY DETAIL MATTERS.",
+   "id": "experience"
+  },
+  {
+   "tag": "h2",
+   "text": "CRAFTED WITH INTENTION.",
+   "id": "craftsmanship"
+  },
+  {
+   "tag": "h2",
+   "text": "FOR THE MOMENTS THAT MATTER MOST.",
+   "id": "weddings"
+  },
+  {
+   "tag": "h2",
+   "text": "YOUR VISION. OUR CRAFT.",
+   "id": "custom"
+  },
+  {
+   "tag": "h3",
+   "text": "Share Your Vision",
+   "id": "custom"
+  },
+  {
+   "tag": "h3",
+   "text": "Design Together",
+   "id": "custom"
+  },
+  {
+   "tag": "h3",
+   "text": "Perfect Every Detail",
+   "id": "custom"
+  },
+  {
+   "tag": "h3",
+   "text": "Bring It To Life",
+   "id": "custom"
+  },
+  {
+   "tag": "h2",
+   "text": "TRUSTED FOR MOMENTS THAT MATTER.",
+   "id": "reviews"
+  },
+  {
+   "tag": "h2",
+   "text": "FOLLOW THE BRILLIANCE",
+   "id": "instagram"
+  },
+  {
+   "tag": "h2",
+   "text": "COME SEE IT IN PERSON.",
+   "id": "contact"
+  },
+  {
+   "tag": "h2",
+   "text": "YOUR NEXT UNFORGETTABLE PIECE STARTS HERE.",
+   "id": "top"
+  }
+ ],
+ "links": [
+  {
+   "text": "LEELA JEWELS JEWELLERY LOUNGE",
+   "href": "https://leela-jewellery.vercel.app/#top",
+   "nav": true
+  },
+  {
+   "text": "COLLECTIONS",
+   "href": "https://leela-jewellery.vercel.app/#collections",
+   "nav": true
+  },
+  {
+   "text": "OUR STORY",
+   "href": "https://leela-jewellery.vercel.app/#story",
+   "nav": true
+  },
+  {
+   "text": "CRAFTSMANSHIP",
+   "href": "https://leela-jewellery.vercel.app/#craftsmanship",
+   "nav": true
+  },
+  {
+   "text": "WEDDINGS",
+   "href": "https://leela-jewellery.vercel.app/#weddings",
+   "nav": true
+  },
+  {
+   "text": "CUSTOM JEWELLERY",
+   "href": "https://leela-jewellery.vercel.app/#custom",
+   "nav": true
+  },
+  {
+   "text": "CONTACT",
+   "href": "https://leela-jewellery.vercel.app/#contact",
+   "nav": true
+  },
+  {
+   "text": "EXPLORE COLLECTIONS",
+   "href": "https://leela-jewellery.vercel.app/#collections",
+   "nav": false
+  },
+  {
+   "text": "EXPLORE COLLECTION →",
+   "href": "https://leela-jewellery.vercel.app/#contact",
+   "nav": false
+  },
+  {
+   "text": "EXPLORE COLLECTION →",
+   "href": "https://leela-jewellery.vercel.app/#contact",
+   "nav": false
+  },
+  {
+   "text": "EXPLORE COLLECTION →",
+   "href": "https://leela-jewellery.vercel.app/#contact",
+   "nav": false
+  },
+  {
+   "text": "EXPLORE COLLECTION →",
+   "href": "https://leela-jewellery.vercel.app/#contact",
+   "nav": false
+  },
+  {
+   "text": "EXPLORE COLLECTION →",
+   "href": "https://leela-jewellery.vercel.app/#contact",
+   "nav": false
+  },
+  {
+   "text": "EXPLORE COLLECTION →",
+   "href": "https://leela-jewellery.vercel.app/#weddings",
+   "nav": false
+  },
+  {
+   "text": "DISCOVER OUR CRAFT →",
+   "href": "https://leela-jewellery.vercel.app/#contact",
+   "nav": false
+  },
+  {
+   "text": "EXPLORE BRIDAL JEWELLERY",
+   "href": "https://leela-jewellery.vercel.app/#collections",
+   "nav": false
+  },
+  {
+   "text": "EXPLORE COLLECTIONS",
+   "href": "https://leela-jewellery.vercel.app/#collections",
+   "nav": false
+  },
+  {
+   "text": "LEELA JEWELS JEWELLERY LOUNGE",
+   "href": "https://leela-jewellery.vercel.app/#top",
+   "nav": false
+  },
+  {
+   "text": "Collections",
+   "href": "https://leela-jewellery.vercel.app/#collections",
+   "nav": false
+  },
+  {
+   "text": "Our Story",
+   "href": "https://leela-jewellery.vercel.app/#story",
+   "nav": false
+  },
+  {
+   "text": "Craftsmanship",
+   "href": "https://leela-jewellery.vercel.app/#craftsmanship",
+   "nav": false
+  },
+  {
+   "text": "Weddings",
+   "href": "https://leela-jewellery.vercel.app/#weddings",
+   "nav": false
+  },
+  {
+   "text": "Custom Jewellery",
+   "href": "https://leela-jewellery.vercel.app/#custom",
+   "nav": false
+  },
+  {
+   "text": "Ghod Dod Road, Surat",
+   "href": "https://leela-jewellery.vercel.app/#contact",
+   "nav": false
+  }
+ ]
+}

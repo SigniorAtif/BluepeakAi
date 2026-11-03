@@ -21,7 +21,7 @@
 .bp-kicker{font:500 .75rem/1 var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--text-faint);margin:0}
 .bp-eyebrow{display:inline-flex;align-items:center;gap:.625rem;margin:0;font:500 .75rem/1.3 var(--font-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted)}
 .bp-eyebrow i{flex:none;width:.4375rem;height:.4375rem;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--accent-tint)}
-.bp-display{margin:0;font:650 clamp(2.75rem,1rem + 6.2vw,7rem)/.94 var(--font-sans);letter-spacing:-.05em;text-wrap:balance}
+.bp-display{margin:0;font:650 clamp(3rem,1.1rem + 6.6vw,7.5rem)/.94 var(--font-sans);letter-spacing:-.05em}
 .bp-display .hl{color:var(--accent-text)}
 .bp-display .dim{color:var(--text-faint)}
 .bp-display .js-i-flip{display:inline-block}
@@ -93,9 +93,9 @@
 /* ---------- hero ---------- */
 .bp-hero{position:relative;z-index:2;display:flex;flex-direction:column;align-items:flex-start;gap:1.5rem;max-width:var(--maxw);margin:0 auto;min-height:calc(100svh - var(--nav-h));justify-content:center;padding:clamp(1.5rem,6vh,4rem) var(--gutter) clamp(5rem,14vh,9rem);pointer-events:none}
 .bp-hero>*{pointer-events:auto}
-.bp-hero .bp-display{max-width:11ch}
+.bp-hero .bp-display{max-width:10.6ch}
+.bp-hero .bp-display .js-i-chars{color:var(--text-faint)}
 .bp-hero-foot{margin:0;font:500 .75rem/1.4 var(--font-mono);letter-spacing:.08em;color:var(--text-faint)}
-@media (min-width:900px){.bp-hero[data-field="1"] .bp-display{max-width:9.6ch}}
 .bp-hero-row{display:flex;flex-direction:column;gap:1.5rem;align-items:flex-start}
 /* Variant C: no field, so the type takes the whole width. */
 .bp-hero[data-variant="c"]{max-width:none;min-height:auto;padding-bottom:clamp(3rem,8vh,5rem);padding-top:clamp(3rem,12vh,7rem)}
@@ -111,14 +111,16 @@ html.js-intro .js-i-flip,html.js-intro .js-i-chars,html.js-intro .js-i-fade,html
 /* ---------- signature field ---------- */
 .bp-field{position:absolute;inset:0 0 auto 0;height:100svh;z-index:1;pointer-events:none;view-transition-name:bp-field}
 .bp-field canvas{position:absolute;inset:0;width:100%;height:100%}
-.bp-fieldtip{position:absolute;left:0;top:0;display:flex;flex-direction:column;gap:.375rem;max-width:20rem;padding:.625rem .75rem;border-radius:var(--radius-control);background:color-mix(in oklab,var(--surface) 90%,transparent);border:1px solid var(--line-strong);box-shadow:var(--shadow-overlay);color:var(--text);opacity:0;transition:opacity .25s var(--ease-out);pointer-events:none}
+.bp-fieldtip{position:absolute;left:0;top:0;display:flex;flex-direction:column;gap:.375rem;max-width:22rem;padding:.625rem .75rem;border-radius:var(--radius-control);background:color-mix(in oklab,var(--surface) 90%,transparent);border:1px solid var(--line-strong);box-shadow:var(--shadow-overlay);color:var(--text);opacity:0;transition:opacity .25s var(--ease-out);pointer-events:none}
 .bp-fieldtip[data-on="1"]{opacity:1;pointer-events:auto}
-.bp-fieldtip span:first-child{font:500 .6875rem/1.2 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent-text)}
+.bp-fieldtip span:first-child{font:500 .6875rem/1.2 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent-text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .bp-fieldtip span:last-child{font:550 .9375rem/1.3 var(--font-sans);text-wrap:balance}
 .bp-fieldcap{position:absolute;left:0;top:0;font:500 .6875rem/1 var(--font-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap;opacity:0;transition:opacity .8s var(--ease-out),color .4s}
 .bp-fieldcap[data-on="1"]{opacity:1}
 .bp-fieldcap[data-hot="1"]{color:var(--accent-text)}
-@media (max-width:899px){.bp-fieldcap{display:none}}
+.bp-fieldsum{position:absolute;right:clamp(1.25rem,4vw,3rem);bottom:1.5rem;font:500 .6875rem/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--text-faint);opacity:0;transition:opacity 1.2s var(--ease-out) .4s}
+.bp-fieldsum[data-on="1"]{opacity:1}
+@media (max-width:899px){.bp-fieldcap,.bp-fieldsum{display:none}}
 
 /* ---------- marquee (from Orbit) ---------- */
 .bp-marquee{position:relative;z-index:2;overflow:hidden;border-block:1px solid var(--line);padding:1.125rem 0;transform:rotate(-1.5deg);margin:0 -2rem;background:var(--bg)}

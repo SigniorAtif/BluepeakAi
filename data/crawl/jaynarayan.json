@@ -1,0 +1,388 @@
+{
+ "url": "https://jay-narayan-marble-ceramic.vercel.app/",
+ "title": "Jay Narayan Marble & Ceramic — Since 1996 | Vadodara",
+ "items": [
+  {
+   "tag": "h1",
+   "text": "Crafting Luxury Spaces Since 1996",
+   "id": "home"
+  },
+  {
+   "tag": "h2",
+   "text": "Ten materials. One standard of craft.",
+   "id": "categories"
+  },
+  {
+   "tag": "h3",
+   "text": "Italian Marble",
+   "id": "catGrid"
+  },
+  {
+   "tag": "h3",
+   "text": "Indian Marble",
+   "id": "catGrid"
+  },
+  {
+   "tag": "h3",
+   "text": "Granite",
+   "id": "catGrid"
+  },
+  {
+   "tag": "h3",
+   "text": "Quartz",
+   "id": "catGrid"
+  },
+  {
+   "tag": "h3",
+   "text": "Designer Tiles",
+   "id": "catGrid"
+  },
+  {
+   "tag": "h3",
+   "text": "Outdoor Tiles",
+   "id": "catGrid"
+  },
+  {
+   "tag": "h3",
+   "text": "Kitchen Collection",
+   "id": "catGrid"
+  },
+  {
+   "tag": "h3",
+   "text": "Bathroom Collection",
+   "id": "catGrid"
+  },
+  {
+   "tag": "h3",
+   "text": "Sanitaryware",
+   "id": "catGrid"
+  },
+  {
+   "tag": "h3",
+   "text": "Luxury Faucets",
+   "id": "catGrid"
+  },
+  {
+   "tag": "h2",
+   "text": "Signature slabs, specified in detail.",
+   "id": "collections"
+  },
+  {
+   "tag": "h3",
+   "text": "Statuario Gold Marble",
+   "id": "collList"
+  },
+  {
+   "tag": "h3",
+   "text": "Absolute Black Granite",
+   "id": "collList"
+  },
+  {
+   "tag": "h3",
+   "text": "Carrara Grey Large Format Tile",
+   "id": "collList"
+  },
+  {
+   "tag": "h3",
+   "text": "Onyx Amber Backlit Panel",
+   "id": "collList"
+  },
+  {
+   "tag": "h2",
+   "text": "Trusted since 1996, chosen for every landmark since.",
+   "id": "why"
+  },
+  {
+   "tag": "h4",
+   "text": "29 Years of Trust",
+   "id": "whyList"
+  },
+  {
+   "tag": "h4",
+   "text": "Vadodara's Biggest Showroom",
+   "id": "whyList"
+  },
+  {
+   "tag": "h4",
+   "text": "5.0 Google Rating",
+   "id": "whyList"
+  },
+  {
+   "tag": "h4",
+   "text": "Genuine Imported Material",
+   "id": "whyList"
+  },
+  {
+   "tag": "h4",
+   "text": "Installation Support",
+   "id": "whyList"
+  },
+  {
+   "tag": "h2",
+   "text": "Spaces we've brought to life.",
+   "id": "projects"
+  },
+  {
+   "tag": "h4",
+   "text": "Alkapuri Private Villa",
+   "id": "projGrid"
+  },
+  {
+   "tag": "h4",
+   "text": "Riverfront Boutique Hotel",
+   "id": "projGrid"
+  },
+  {
+   "tag": "h4",
+   "text": "Gotri Corporate Office",
+   "id": "projGrid"
+  },
+  {
+   "tag": "h4",
+   "text": "Sun Pharma Road Bungalow",
+   "id": "projGrid"
+  },
+  {
+   "tag": "h4",
+   "text": "Old Padra Road Restaurant",
+   "id": "projGrid"
+  },
+  {
+   "tag": "h4",
+   "text": "Karelibaug Retail Facade",
+   "id": "projGrid"
+  },
+  {
+   "tag": "h2",
+   "text": "Walk through 12,000+ sq. ft. of material, guided by an expert.",
+   "id": "showroom"
+  },
+  {
+   "tag": "h4",
+   "text": "Tile & Marble Calculator",
+   "id": "showroom"
+  },
+  {
+   "tag": "h2",
+   "text": "Reviewed 5.0 on Google",
+   "id": "testimonials"
+  },
+  {
+   "tag": "h2",
+   "text": "Let's plan your space, together.",
+   "id": "contact"
+  }
+ ],
+ "links": [
+  {
+   "text": "Jay Narayan MARBLE & CERAMIC · EST. 1996",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#home",
+   "nav": true
+  },
+  {
+   "text": "MARBLE",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#collections",
+   "nav": true
+  },
+  {
+   "text": "GRANITE",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#collections",
+   "nav": true
+  },
+  {
+   "text": "TILES",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#collections",
+   "nav": true
+  },
+  {
+   "text": "BATHROOM",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#collections",
+   "nav": true
+  },
+  {
+   "text": "PROJECTS",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#projects",
+   "nav": true
+  },
+  {
+   "text": "GALLERY",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#showroom",
+   "nav": true
+  },
+  {
+   "text": "ABOUT",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#why",
+   "nav": true
+  },
+  {
+   "text": "CONTACT",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#contact",
+   "nav": true
+  },
+  {
+   "text": "BOOK VISIT",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#contact",
+   "nav": true
+  },
+  {
+   "text": "Marble",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#collections",
+   "nav": false
+  },
+  {
+   "text": "Granite & Tiles",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#collections",
+   "nav": false
+  },
+  {
+   "text": "Projects",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#projects",
+   "nav": false
+  },
+  {
+   "text": "Gallery",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#showroom",
+   "nav": false
+  },
+  {
+   "text": "About",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#why",
+   "nav": false
+  },
+  {
+   "text": "Contact",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#contact",
+   "nav": false
+  },
+  {
+   "text": "EXPLORE COLLECTION",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#collections",
+   "nav": false
+  },
+  {
+   "text": "BOOK SHOWROOM VISIT",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#contact",
+   "nav": false
+  },
+  {
+   "text": "ENQUIRE NOW →",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#contact",
+   "nav": false
+  },
+  {
+   "text": "DOWNLOAD CATALOGUE →",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#contact",
+   "nav": false
+  },
+  {
+   "text": "ENQUIRE NOW →",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#contact",
+   "nav": false
+  },
+  {
+   "text": "DOWNLOAD CATALOGUE →",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#contact",
+   "nav": false
+  },
+  {
+   "text": "ENQUIRE NOW →",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#contact",
+   "nav": false
+  },
+  {
+   "text": "DOWNLOAD CATALOGUE →",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#contact",
+   "nav": false
+  },
+  {
+   "text": "ENQUIRE NOW →",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#contact",
+   "nav": false
+  },
+  {
+   "text": "DOWNLOAD CATALOGUE →",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#contact",
+   "nav": false
+  },
+  {
+   "text": "BOOK PERSONAL CONSULTANT",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#contact",
+   "nav": false
+  },
+  {
+   "text": "Marble",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#collections",
+   "nav": false
+  },
+  {
+   "text": "Granite",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#collections",
+   "nav": false
+  },
+  {
+   "text": "Tiles",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#collections",
+   "nav": false
+  },
+  {
+   "text": "Bathroom",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#collections",
+   "nav": false
+  },
+  {
+   "text": "About Us",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#why",
+   "nav": false
+  },
+  {
+   "text": "Projects",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#projects",
+   "nav": false
+  },
+  {
+   "text": "Showroom",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#showroom",
+   "nav": false
+  },
+  {
+   "text": "Contact",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#contact",
+   "nav": false
+  },
+  {
+   "text": "Consultation",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#showroom",
+   "nav": false
+  },
+  {
+   "text": "Calculator",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#showroom",
+   "nav": false
+  },
+  {
+   "text": "Book Visit",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#contact",
+   "nav": false
+  },
+  {
+   "text": "Catalogue",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#",
+   "nav": false
+  },
+  {
+   "text": "Privacy Policy",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#",
+   "nav": false
+  },
+  {
+   "text": "Terms of Service",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#",
+   "nav": false
+  },
+  {
+   "text": "FAQs",
+   "href": "https://jay-narayan-marble-ceramic.vercel.app/#",
+   "nav": false
+  }
+ ]
+}
