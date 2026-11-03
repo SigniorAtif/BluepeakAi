@@ -58,10 +58,12 @@
 }
 
 /* ---------- nav ---------- */
-.bp-nav{position:sticky;top:0;z-index:40;view-transition-name:bp-nav;transition:background-color .3s var(--ease-out),border-color .3s var(--ease-out),backdrop-filter .3s}
-.bp-nav[data-scrolled="1"]{background:color-mix(in oklab,var(--bg) 82%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.bp-nav:not([data-scrolled="1"]){border-bottom:1px solid transparent}
-.bp-navin{display:flex;align-items:center;gap:1rem;min-height:var(--nav-h);max-width:calc(var(--maxw) + 4rem);margin:0 auto;padding:0 clamp(1rem,4vw,3rem)}
+.bp-nav{position:sticky;top:0;z-index:40;view-transition-name:bp-nav}
+.bp-navin{--pad:clamp(1.25rem,4vw,3rem);position:relative;isolation:isolate;display:flex;align-items:center;gap:1rem;min-height:var(--nav-h);max-width:calc(var(--maxw) + 4rem);margin:0 auto;padding:0 var(--pad)}
+/* Scrolled, the nav sits in a solid floating capsule drawn behind it; its corners nest around the CTA's. */
+.bp-navin::before{content:"";position:absolute;z-index:-1;top:calc((var(--nav-h) - 3.25rem) / 2);bottom:calc((var(--nav-h) - 3.25rem) / 2);left:max(.5rem,calc(var(--pad) - 1rem));right:max(.5rem,calc(var(--pad) - .5rem));border-radius:calc(var(--radius-control) + .5rem);background:var(--surface);border:1px solid var(--line);box-shadow:0 10px 30px -14px rgba(0,0,0,.7);opacity:0;transform:translateY(-.375rem) scale(1.01);transition:opacity .3s var(--ease-out),transform .5s var(--ease-expo);pointer-events:none}
+[data-theme="light"] .bp-navin::before{box-shadow:0 10px 30px -14px rgba(26,24,22,.18)}
+.bp-nav[data-scrolled="1"] .bp-navin::before{opacity:1;transform:none}
 .bp-logo{position:relative;display:inline-flex;align-items:center;gap:.5rem;color:var(--text);font:650 1.1875rem/1 var(--font-sans);letter-spacing:-.03em;white-space:nowrap}
 .bp-logo-mark{width:1.375rem;height:1.375rem;flex:none;color:var(--accent-text)}
 .bp-logo-a,.bp-logo-b{display:inline-flex;align-items:center;gap:.5rem}
