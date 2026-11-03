@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
-import { featured, process4, projects, services, waLink } from "@/content/site";
+import { ctas, featured, process4, projects, services } from "@/content/site";
 import HeroIntro from "@/components/HeroIntro";
 import HomeHero from "@/components/HomeHero";
 import WorkRows from "@/components/WorkRows";
 import Page from "@/components/Page";
+import CtaBand from "@/components/CtaBand";
 
 export default function Home() {
   const picks = featured.map((id) => projects.find((p) => p.id === id)!);
@@ -83,21 +84,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bp-sec">
-        <div className="bp-cta">
-          <span className="bp-kicker">Have a project in mind?</span>
-          <h2 className="bp-h2">Let&apos;s make your next move your smartest one.</h2>
-          <p className="bp-lede">Tell us what you want to improve. We&apos;ll talk through your goals, suggest a practical direction and share a tailored quote on a call.</p>
-          <div className="bp-ctas">
-            <Link href="/contact" className="bp-btn primary lg">
-              Discuss a project <ArrowUpRight size={17} className="nudge" />
-            </Link>
-            <a href={waLink()} target="_blank" rel="noopener noreferrer" className="bp-btn secondary lg">
-              Message on WhatsApp
-            </a>
-          </div>
-        </div>
-      </section>
+      <CtaBand head={ctas.home} />
     </Page>
   );
 }

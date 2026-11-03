@@ -8,8 +8,8 @@ import { glide } from "./motion";
 
 /*
  * Project rows. On a desktop pointer, a screenshot of the live site follows the cursor, opening
- * with a clip-path wipe and swapping as you move between rows. Phones and keyboards get the rows
- * alone; every row is a plain link to the live project.
+ * with a clip-path wipe and swapping as you move between rows. Phones show the screenshot inside
+ * each row instead; every row is a plain link to the live project.
  */
 export default function WorkRows({ items, layout = false }: { items: Project[]; layout?: boolean }) {
   const reduce = useReducedMotion();
@@ -48,10 +48,13 @@ export default function WorkRows({ items, layout = false }: { items: Project[]; 
               href={p.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="bp-row"
+              className="bp-row has-img"
               onPointerEnter={() => setHot(p)}
               aria-label={`${p.name}, ${p.kind.toLowerCase()}. Opens the live site.`}
             >
+              {/* Phones get the screenshot inline; the cursor peek covers wide screens. */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img className="bp-row-img" src={p.shot} alt="" loading="lazy" width={1440} height={900} />
               <span className="bp-row-k bp-work-k">
                 <span>{p.sector}</span>
                 <span className="bp-tag" data-live={p.kind === "Live site" ? "1" : "0"}>
