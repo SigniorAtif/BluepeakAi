@@ -178,21 +178,20 @@ html.js-intro .js-i-flip,html.js-intro .js-i-chars,html.js-intro .js-i-fade,html
 }
 
 /* ---------- home: the last word ---------- */
-.bp-coda{position:relative;z-index:2;height:260vh}
-.bp-coda-pin{position:sticky;top:0;display:flex;align-items:center;height:100vh;height:100svh}
-.bp-coda-in{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter);display:flex;flex-direction:column;gap:clamp(1.5rem,4vh,2.5rem)}
-.bp-coda-line{margin:0;max-width:15ch;font:650 clamp(2.75rem,1rem + 6vw,7.25rem)/.98 var(--font-sans);letter-spacing:-.05em}
-.bp-coda-word{display:inline-block;white-space:nowrap}
-@media (min-width:700px){.bp-coda-line{max-width:none}.bp-coda-row{display:block}}
-.bp-coda-ch{display:inline-block}
-.bp-coda-sign{display:flex;align-items:center;gap:.875rem;margin:0;font:500 clamp(1rem,.9rem + .4vw,1.25rem)/1 var(--font-sans);color:var(--text)}
-.bp-coda-sign i{width:2.5rem;height:1px;background:var(--accent)}
+.bp-coda{position:relative;z-index:2;height:200vh}
+.bp-coda-pin{position:sticky;top:0;display:flex;align-items:center;justify-content:center;height:100vh;height:100svh;padding:0 var(--gutter)}
+.bp-coda-in{display:flex;flex-direction:column;align-items:center;gap:clamp(1rem,2.5vh,1.5rem);max-width:var(--maxw);text-align:center;will-change:transform}
+.bp-coda-line{margin:0;font:650 clamp(1.75rem,.55rem + 3.35vw,4.5rem)/1.08 var(--font-sans);letter-spacing:-.04em;text-wrap:balance}
+@media (min-width:900px){.bp-coda-line{white-space:nowrap}}
+.bp-coda-sign{display:flex;align-items:center;gap:.875rem;margin:0;font:500 clamp(.9375rem,.85rem + .3vw,1.125rem)/1 var(--font-sans);color:var(--text-muted)}
+.bp-coda-sign i{width:2rem;height:1px;background:var(--accent)}
 .bp-coda-sign b{font-weight:inherit;color:var(--accent-text)}
 @media (prefers-reduced-motion:reduce){
-  .bp-coda{height:auto;padding:30vh 0 22vh}
+  .bp-coda{height:auto;padding:30vh 0 12vh}
   .bp-coda-pin{position:static;height:auto}
-  .bp-coda-ch,.bp-coda-sign{opacity:1 !important;transform:none !important}
+  .bp-coda-in,.bp-coda-line,.bp-coda-sign{opacity:1 !important;transform:none !important}
 }
+
 
 /* ---------- work preview rows ---------- */
 .bp-work-k{display:flex;flex-direction:column;gap:.375rem}

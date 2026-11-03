@@ -1,80 +1,91 @@
 "use client";
 
-import { Fragment, useRef } from "react";
-import { motion, useScroll, useTransform, type MotionValue } from "motion/react";
+import { useEffect, useRef } from "react";
+import { motion, useMotionValue, useMotionValueEvent, useScroll, useTransform } from "motion/react";
 import { coda } from "@/content/site";
 
 /*
- * The home page's last words. The page scrolls on into empty space, the screen holds, and the
- * scroll itself writes the line in, letter by letter, then signs it. Then the footer arrives.
+ * The home page's last words. The page scrolls on into empty space, the screen holds, and one line
+ * fades in at its centre. When the footer starts to rise, the line stays put at first, then drifts
+ * up ahead of it and comes to rest in the strip between the nav and the footer's top edge.
  *
- * The section is tall and its stage is sticky, so the scroll has room to play the line. Progress 0
- * is the section's top entering the viewport; the stage pins at about 0.28 and the letters run from
- * 0.36 to 0.74. Reduced motion skips the pin and shows the line as plain text.
+ * The stage is sticky inside a tall section. Once the section ends, the stage is carried up by the
+ * footer (by `d` pixels); the line is translated back down by `d - lift(d)`, so on screen it only
+ * rises by `lift(d)`: slow at first, never closer than GAP to the footer, and at the page end it sits
+ * centred in the strip above the footer (or just above the footer if the strip is too short).
+ * Reduced motion skips the pin and the drift (CSS), and the line is simply there.
  */
-const FROM = 0.36;
-const TO = 0.74;
-const SPAN = 0.07;
+const GAP = 24;
 
 export default function Coda() {
-  const ref = useRef<HTMLElement>(null);
-  const { scrollYProgress: p } = useScroll({ target: ref, offset: ["start end", "end end"] });
-  const sign = useTransform(p, [0.78, 0.88], [0, 1]);
-  const signY = useTransform(p, [0.78, 0.88], [12, 0]);
+  const section = useRef<HTMLElement>(null);
+  const block = useRef<HTMLDivElement>(null);
+  const { scrollYProgress: p, scrollY } = useScroll({ target: section, offset: ["start end", "end end"] });
+  // The section is 2 viewports tall, so the stage pins at p = 0.5; the line fades in soon after.
+  const show = useTransform(p, [0.56, 0.78], [0, 1]);
+  const sign = useTransform(p, [0.68, 0.86], [0, 1]);
+  const y = useMotionValue(0);
+  const geo = useRef({ release: 0, run: 0, foot: 0, navH: 72, vh: 800, h: 100 });
 
-  // Each letter's start, spread evenly over FROM..TO in reading order.
-  const line = coda.lines.join(" ");
-  const total = line.replace(/ /g, "").length;
-  let seen = 0;
-  const rows = coda.lines.map((row) =>
-    row.split(" ").map((w) =>
-      w.split("").map((ch) => ({ ch, at: FROM + ((TO - FROM - SPAN) * seen++) / Math.max(1, total - 1) })),
-    ),
-  );
+  const place = (scroll: number) => {
+    const { release, run, foot, navH, vh, h } = geo.current;
+    const d = Math.min(run, Math.max(0, scroll - release));
+    if (run <= 0 || d <= 0) return y.set(0);
+    // At the page end the footer's top sits at vh - foot; the strip above it runs from the nav down.
+    const strip = vh - foot - navH;
+    const target = strip >= h + GAP * 2 ? navH + strip / 2 : vh - foot - GAP - h / 2;
+    const most = Math.max(0, vh / 2 - target);
+    // How far the stage can be carried before the footer (which starts run - foot below it) gets close.
+    const free = vh / 2 - h / 2 - GAP + (run - foot);
+    const t = d / run;
+    const lift = Math.max(most * t * t, d - free, 0);
+    y.set(d - lift);
+  };
+
+  useEffect(() => {
+    const measure = () => {
+      const el = section.current;
+      const b = block.current;
+      if (!el || !b) return;
+      const vh = window.innerHeight;
+      const doc = document.documentElement.scrollHeight;
+      const bottom = el.getBoundingClientRect().bottom + window.scrollY;
+      const footer = document.querySelector<HTMLElement>(".bp-foot");
+      const footTop = footer ? footer.getBoundingClientRect().top + window.scrollY : bottom;
+      const navH = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--nav-h")) * 16 || 72;
+      geo.current = { release: bottom - vh, run: doc - bottom, foot: doc - footTop, navH, vh, h: b.offsetHeight };
+      place(window.scrollY);
+    };
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(document.documentElement);
+    window.addEventListener("resize", measure);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", measure);
+    };
+    // place only reads refs and a motion value.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  useMotionValueEvent(scrollY, "change", place);
 
   return (
-    <section ref={ref} className="bp-coda" aria-label="A last word">
+    <section ref={section} className="bp-coda" aria-label="A last word">
       <div className="bp-coda-pin">
-        <div className="bp-coda-in">
-          <p className="bp-coda-line">
-            <span className="sr-only">{line}</span>
-            {rows.map((words, ri) => (
-              <Fragment key={ri}>
-                <span className="bp-coda-row">
-                  {words.map((w, wi) => (
-                    <Fragment key={wi}>
-                      <span className="bp-coda-word" aria-hidden>
-                        {w.map((c, ci) => (
-                          <Char key={ci} ch={c.ch} p={p} at={c.at} />
-                        ))}
-                      </span>
-                      {wi < words.length - 1 && " "}
-                    </Fragment>
-                  ))}
-                </span>
-                {ri < rows.length - 1 && " "}
-              </Fragment>
-            ))}
-          </p>
-          <motion.p className="bp-coda-sign" style={{ opacity: sign, y: signY }}>
+        <motion.div ref={block} className="bp-coda-in" style={{ y }}>
+          <motion.p className="bp-coda-line" style={{ opacity: show }}>
+            {coda.line}
+          </motion.p>
+          <motion.p className="bp-coda-sign" style={{ opacity: sign }}>
             <i aria-hidden />
             <span>
               {coda.sign[0]}
               <b>{coda.sign[1]}</b>
             </span>
+            <i aria-hidden />
           </motion.p>
-        </div>
+        </motion.div>
       </div>
     </section>
-  );
-}
-
-function Char({ ch, p, at }: { ch: string; p: MotionValue<number>; at: number }) {
-  const o = useTransform(p, [at, at + SPAN], [0, 1]);
-  const y = useTransform(p, [at, at + SPAN], ["0.18em", "0em"]);
-  return (
-    <motion.span className="bp-coda-ch" style={{ opacity: o, y }}>
-      {ch}
-    </motion.span>
   );
 }

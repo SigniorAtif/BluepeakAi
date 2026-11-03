@@ -469,7 +469,6 @@ export const legal = {
 
 /** The home page's last words, written in by the scroll before the footer. */
 export const coda = {
-  // Set as these three lines on wide screens; phones wrap it naturally.
-  lines: ["Let's make your", "next move", "your smartest one."],
+  line: "Let's make your next move your smartest one.",
   sign: ["Team BluePeak", "AI"] as [string, string],
 };
