@@ -15,11 +15,9 @@ import { pages } from "@/content/site";
 import { Wordmark } from "./Wordmark";
 import {
   getAccent,
-  getBlue,
   getTheme,
   originOf,
   restorePrefs,
-  setAccent,
   setTheme,
   subscribePrefs,
 } from "./prefs";
@@ -49,32 +47,20 @@ export function usePrefs() {
 }
 
 export function PrefToggles() {
-  const { theme, accent } = usePrefs();
-  const ember = accent === "ember";
+  const { theme } = usePrefs();
   return (
-    <>
-      <button
-        type="button"
-        className="bp-iconbtn"
-        aria-label={ember ? "Switch accent to blue" : "Switch accent to ember"}
-        title={ember ? "Blue accent" : "Ember accent"}
-        onClick={(e) => setAccent(ember ? getBlue() : "ember", originOf(e))}
-      >
-        <span className="bp-swatch" />
-      </button>
-      <button
-        type="button"
-        className="bp-iconbtn"
-        aria-label={
-          theme === "dark" ? "Switch to light theme" : "Switch to dark theme"
-        }
-        onClick={(e) =>
-          setTheme(theme === "dark" ? "light" : "dark", originOf(e))
-        }
-      >
-        {theme === "dark" ? <Sun size={17} /> : <Moon size={17} />}
-      </button>
-    </>
+    <button
+      type="button"
+      className="bp-iconbtn"
+      aria-label={
+        theme === "dark" ? "Switch to light theme" : "Switch to dark theme"
+      }
+      onClick={(e) =>
+        setTheme(theme === "dark" ? "light" : "dark", originOf(e))
+      }
+    >
+      {theme === "dark" ? <Sun size={17} /> : <Moon size={17} />}
+    </button>
   );
 }
 

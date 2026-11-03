@@ -74,7 +74,6 @@
 .bp-navtools{display:flex;align-items:center;gap:.25rem}
 .bp-iconbtn{display:inline-grid;place-items:center;width:2.25rem;height:2.25rem;border-radius:.5rem;color:var(--text-muted);transition:color .16s,background-color .16s}
 .bp-iconbtn:hover{color:var(--text);background:var(--surface-hover)}
-.bp-swatch{width:.875rem;height:.875rem;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px var(--accent-tint),inset 0 0 0 1px color-mix(in oklab,var(--text) 18%,transparent)}
 .bp-kbd{font:500 .6875rem/1 var(--font-mono);color:var(--text-faint);border:1px solid var(--line-strong);border-radius:5px;padding:.25rem .375rem}
 .bp-menubtn{display:none}
 @media (max-width:960px){
