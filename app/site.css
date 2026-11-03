@@ -190,10 +190,12 @@ html.js-intro .js-i-flip,html.js-intro .js-i-chars,html.js-intro .js-i-fade,html
 .bp-foot-base a{color:var(--text-faint)}
 .bp-foot-base a:hover{color:var(--accent-text)}
 .bp-foot-base .sep{display:flex;gap:1.25rem}
-.bp-footmark{overflow:hidden;margin:.5rem 0 -6.2vw;color:var(--accent);opacity:.92}
-.bp-footmark-in{display:flex;justify-content:center;padding-top:.08em;font:700 22.5vw/.9 var(--font-sans);letter-spacing:-.06em;white-space:nowrap}
+.bp-footmark{overflow:hidden;margin:.5rem 0 -4vw;color:var(--accent);opacity:.92}
+.bp-footmark-in{display:flex;justify-content:center;padding-top:.08em;font:700 14.4vw/.9 var(--font-display);letter-spacing:-.03em;white-space:nowrap}
+.bp-footmark-in .tail{color:var(--text)}
 .bp-footmark-in span{display:block}
-@media (min-width:1500px){.bp-footmark-in{font-size:21rem}.bp-footmark{margin-bottom:-5.8rem}}
+@media (prefers-reduced-motion:reduce){.bp-footmark-in span{transform:none !important}}
+@media (min-width:1500px){.bp-footmark-in{font-size:13.5rem}.bp-footmark{margin-bottom:-3.75rem}}
 
 /* ---------- floating WhatsApp chip ---------- */
 .bp-chat{position:fixed;right:clamp(1rem,3vw,1.75rem);bottom:clamp(1rem,3vw,1.75rem);z-index:35;display:inline-flex;align-items:center;gap:.5rem;height:2.75rem;padding:0 1rem 0 .875rem;border-radius:var(--radius-pill);border:1px solid var(--line-strong);background:color-mix(in oklab,var(--surface-raised) 90%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--text);font:500 .8125rem/1 var(--font-sans);box-shadow:var(--shadow-overlay);transition:border-color .2s,transform .3s var(--ease-expo)}

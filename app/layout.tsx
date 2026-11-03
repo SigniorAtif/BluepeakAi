@@ -1,11 +1,13 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Bodoni_Moda, Geist, Geist_Mono } from "next/font/google";
 import { BOOT, INTRO_GUARD } from "@/components/prefs";
 import "./globals.css";
 import "./site.css";
 
 const sans = Geist({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--font-geist", display: "swap" });
 const mono = Geist_Mono({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-geist-mono", display: "swap" });
+// Orbit's display face, used only for the footer's oversized name; not preloaded, the footer is far below.
+const display = Bodoni_Moda({ subsets: ["latin"], axes: ["opsz"], variable: "--font-bodoni", display: "swap", preload: false });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://bluepeakai.in"),
@@ -27,7 +29,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={sans.variable + " " + mono.variable} data-theme="dark" data-accent="glacier" suppressHydrationWarning>
+    <html lang="en" className={`${sans.variable} ${mono.variable} ${display.variable}`} data-theme="dark" data-accent="glacier" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: BOOT }} />
         <script dangerouslySetInnerHTML={{ __html: INTRO_GUARD }} />
