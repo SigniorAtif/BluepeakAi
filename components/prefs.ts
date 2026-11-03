@@ -17,8 +17,11 @@ const EVENT = "bp:prefs";
 
 export const BOOT = `(function(){var d=document.documentElement;try{var t=localStorage.getItem('${THEME_KEY}');d.setAttribute('data-theme',t==='light'?'light':'dark');var b=localStorage.getItem('${BLUE_KEY}')||'${DEFAULT_BLUE}';var a=localStorage.getItem('${ACCENT_KEY}')==='ember'?'ember':b;var q=new URLSearchParams(location.search).get('accent');if(q)a=q;d.setAttribute('data-accent',a);}catch(e){d.setAttribute('data-theme','dark');d.setAttribute('data-accent','${DEFAULT_BLUE}');}})();`;
 
-/** Run in <head> on a cold load of the home page: hides the intro's actors before paint. */
-export const INTRO_GUARD = `if(location.pathname==="/"&&!matchMedia("(prefers-reduced-motion: reduce)").matches){try{if(!sessionStorage.getItem("bp.intro")){document.documentElement.classList.add("js-intro");setTimeout(function(){if(!window.__bpIntro)document.documentElement.classList.remove("js-intro")},5000)}}catch(e){}}`;
+/**
+ * Run in <head> on every full load of the home page: hides the intro's actors before paint and
+ * flags this load as owed an intro. Client-side visits to "/" never run it, so they skip the intro.
+ */
+export const INTRO_GUARD = `if(location.pathname==="/"&&!matchMedia("(prefers-reduced-motion: reduce)").matches){window.__bpIntroDue=true;document.documentElement.classList.add("js-intro");setTimeout(function(){if(!window.__bpIntro)document.documentElement.classList.remove("js-intro")},5000)}`;
 
 const read = (k: string) => {
   try {

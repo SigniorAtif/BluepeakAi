@@ -9,7 +9,7 @@ import { BLOOM } from "./fields/kit";
 gsap.registerPlugin(useGSAP, SplitText);
 
 /*
- * The home intro, once per visit (Crambook's, re-cut). No overlay copies: every actor is the real
+ * The home intro, on every full load of the home page (Crambook's, re-cut). No overlay copies: every actor is the real
  * page element.
  *
  *   opening   "Ideas that automate." fades in letter by letter mid-screen at the headline's real
@@ -22,7 +22,7 @@ gsap.registerPlugin(useGSAP, SplitText);
  *   settle    "Strategies that grow.", the lede, the buttons and the nav fade in
  *
  * Phones skip the divider and halves. A click, key, wheel or touch skips to the end; reduced
- * motion and repeat visits in the same session never see it.
+ * motion never sees it, and nor does a client-side visit back to the home page.
  */
 export default function HeroIntro() {
   const root = useRef<HTMLDivElement>(null);
@@ -30,7 +30,8 @@ export default function HeroIntro() {
   useGSAP((_, contextSafe) => {
     const box = root.current;
     if (!box) return;
-    (window as unknown as { __bpIntro?: boolean }).__bpIntro = true;
+    const w = window as unknown as { __bpIntro?: boolean; __bpIntroDue?: boolean };
+    w.__bpIntro = true;
 
     const html = document.documentElement;
     const line = box.querySelector<HTMLElement>(".js-intro-line");
@@ -44,15 +45,11 @@ export default function HeroIntro() {
       window.dispatchEvent(new Event(BLOOM));
     };
 
-    let seen = false;
-    try {
-      seen = !!sessionStorage.getItem("bp.intro");
-    } catch {}
-    // Marked only once it has played or been skipped, so React's dev double-mount can't eat it.
+    // The boot guard flags each full load of "/". Cleared only once the intro has played or been
+    // skipped, so React's dev double-mount can't eat it.
+    const seen = !w.__bpIntroDue;
     const mark = () => {
-      try {
-        sessionStorage.setItem("bp.intro", "1");
-      } catch {}
+      w.__bpIntroDue = false;
     };
     const reveal = [".js-i-flip", ".js-i-chars", ".js-i-fade", ".js-i-fade-top"];
     if (seen || html.dataset.bloom === "1" || !anchors.length || !logo || matchMedia("(prefers-reduced-motion: reduce)").matches) {
