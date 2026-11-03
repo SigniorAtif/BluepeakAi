@@ -21,6 +21,9 @@ export const BOOT = `(function(){var d=document.documentElement;try{var t=localS
  * Run in <head> on every full load of the home page: hides the intro's actors before paint and
  * flags this load as owed an intro. Client-side visits to "/" never run it, so they skip the intro.
  */
+/** Fired once the home intro has played or been skipped. */
+export const INTRO_DONE = "bp:introdone";
+
 export const INTRO_GUARD = `if(location.pathname==="/"&&!matchMedia("(prefers-reduced-motion: reduce)").matches){window.__bpIntroDue=true;document.documentElement.classList.add("js-intro");setTimeout(function(){if(!window.__bpIntro)document.documentElement.classList.remove("js-intro")},5000)}`;
 
 const read = (k: string) => {

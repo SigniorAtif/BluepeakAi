@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/SplitText";
 import { BLOOM } from "./fields/kit";
+import { INTRO_DONE } from "./prefs";
 
 gsap.registerPlugin(useGSAP, SplitText);
 
@@ -49,13 +50,16 @@ export default function HeroIntro() {
     // skipped, so React's dev double-mount can't eat it.
     const seen = !w.__bpIntroDue;
     const mark = () => {
+      if (!w.__bpIntroDue) return;
       w.__bpIntroDue = false;
+      window.dispatchEvent(new Event(INTRO_DONE));
     };
     const reveal = [".js-i-flip", ".js-i-chars", ".js-i-fade", ".js-i-fade-top"];
     if (seen || html.dataset.bloom === "1" || !anchors.length || !logo || matchMedia("(prefers-reduced-motion: reduce)").matches) {
       html.classList.remove("js-intro");
       gsap.set(box, { display: "none" });
       bloom();
+      mark();
       return;
     }
 
