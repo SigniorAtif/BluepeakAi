@@ -1,10 +1,12 @@
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { brand, contact, featured, projects } from "@/content/site";
 import HeroIntro from "@/components/HeroIntro";
 import HomeHero from "@/components/HomeHero";
 import Page from "@/components/Page";
+import WorkRows from "@/components/WorkRows";
 import ServicePoster from "@/components/ServicePoster";
 import SystemScene from "@/components/SystemScene";
-import WorkStage from "@/components/WorkStage";
 import Coda from "@/components/Coda";
 
 const jsonLd = {
@@ -32,7 +34,21 @@ export default function Home() {
 
       <ServicePoster />
       <SystemScene />
-      <WorkStage items={picks} total={projects.length} />
+      <section className="bp-sec" id="work">
+        <div className="bp-sechead">
+          <span className="bp-kicker">Selected work</span>
+          <h2 className="bp-h2">
+            Built for different <span className="dim">business needs.</span>
+          </h2>
+          <p>Websites and demos across different industries. Open any of them to see it live.</p>
+        </div>
+        <WorkRows items={picks} />
+        <div>
+          <Link href="/work" className="bp-btn secondary">
+            All eight projects <ArrowRight size={16} />
+          </Link>
+        </div>
+      </section>
       <Coda />
     </Page>
   );
