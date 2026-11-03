@@ -237,12 +237,9 @@ html.js-intro .js-i-flip,html.js-intro .js-i-chars,html.js-intro .js-i-fade,html
 .bp-foot-nav a .bp-mono{color:var(--accent-text)}
 .bp-foot-nav a .grow{flex:1}
 .bp-foot-nav a .bp-arrow{font-size:.875rem;color:var(--text-faint)}
-.bp-foot-svc{display:flex;flex-wrap:wrap;gap:.5rem 1.25rem}
+.bp-foot-svc{display:flex;flex-wrap:wrap;gap:.5rem 1rem;letter-spacing:.14em}
 .bp-foot-svc a{color:var(--text-muted)}
 .bp-foot-svc a:hover{color:var(--accent-text)}
-.bp-foot-status{display:flex;align-items:center;gap:.625rem;color:var(--text-muted)}
-.bp-foot-status i{width:.375rem;height:.375rem;border-radius:50%;background:var(--accent);animation:bp-shimmer 2.4s ease-in-out infinite}
-@keyframes bp-shimmer{50%{opacity:.35}}
 .bp-foot-base{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 1.5rem;margin-top:clamp(2rem,4vw,3.5rem);color:var(--text-faint)}
 .bp-foot-base a{color:var(--text-faint)}
 .bp-foot-base a:hover{color:var(--accent-text)}

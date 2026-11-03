@@ -12,6 +12,11 @@ import { isActive } from "./SiteNav";
  * pages as numbered rows (minus the one you're on), and the name rising out of the bottom edge.
  * "band" sits on a raised surface (home); "plain" sits on the page colour.
  */
+// The three core services, short enough to sit on one line at every width; the rest are a click away.
+const footServices = services
+  .filter((s) => ["websites", "automation", "whatsapp"].includes(s.id))
+  .map((s) => ({ ...s, short: s.id === "websites" ? "Websites" : s.short }));
+
 export default function SiteFooter() {
   const path = usePathname() || "/";
   const variant = path === "/" ? "band" : "plain";
@@ -59,15 +64,11 @@ export default function SiteFooter() {
               ))}
             </nav>
             <div className="bp-foot-svc bp-mono">
-              {services.map((s) => (
+              {footServices.map((s) => (
                 <Link key={s.id} href={`/services#${s.id}`}>
                   {s.short}
                 </Link>
               ))}
-            </div>
-            <div className="bp-foot-status bp-mono">
-              <i aria-hidden />
-              {brand.reach}
             </div>
           </div>
         </div>
