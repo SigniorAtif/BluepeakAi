@@ -1,0 +1,323 @@
+{
+ "url": "https://my-smile-dental-clinic.vercel.app/",
+ "title": "My Smile Dental Clinic | Premium Dental Care in Andheri West, Mumbai",
+ "items": [
+  {
+   "tag": "h1",
+   "text": "India's Trusted Smile Experts",
+   "id": ""
+  },
+  {
+   "tag": "h2",
+   "text": "Complete Dental Care, Under One Roof",
+   "id": "services"
+  },
+  {
+   "tag": "h4",
+   "text": "Dental Implants",
+   "id": "servicesGrid"
+  },
+  {
+   "tag": "h4",
+   "text": "Root Canal Treatment",
+   "id": "servicesGrid"
+  },
+  {
+   "tag": "h4",
+   "text": "Smile Designing",
+   "id": "servicesGrid"
+  },
+  {
+   "tag": "h4",
+   "text": "Invisalign",
+   "id": "servicesGrid"
+  },
+  {
+   "tag": "h4",
+   "text": "Teeth Whitening",
+   "id": "servicesGrid"
+  },
+  {
+   "tag": "h4",
+   "text": "Braces",
+   "id": "servicesGrid"
+  },
+  {
+   "tag": "h4",
+   "text": "Veneers",
+   "id": "servicesGrid"
+  },
+  {
+   "tag": "h4",
+   "text": "Crowns & Bridges",
+   "id": "servicesGrid"
+  },
+  {
+   "tag": "h4",
+   "text": "Kids Dentistry",
+   "id": "servicesGrid"
+  },
+  {
+   "tag": "h4",
+   "text": "Wisdom Tooth Removal",
+   "id": "servicesGrid"
+  },
+  {
+   "tag": "h4",
+   "text": "Gum Treatment",
+   "id": "servicesGrid"
+  },
+  {
+   "tag": "h4",
+   "text": "Smile Makeover",
+   "id": "servicesGrid"
+  },
+  {
+   "tag": "h4",
+   "text": "Cosmetic Dentistry",
+   "id": "servicesGrid"
+  },
+  {
+   "tag": "h4",
+   "text": "Teeth Cleaning",
+   "id": "servicesGrid"
+  },
+  {
+   "tag": "h2",
+   "text": "Care That Feels Different, From the First Visit",
+   "id": ""
+  },
+  {
+   "tag": "h2",
+   "text": "Doctors Who Treat You Like Family",
+   "id": "doctors"
+  },
+  {
+   "tag": "h4",
+   "text": "Dr. Aisha Kapoor",
+   "id": "doctorsGrid"
+  },
+  {
+   "tag": "h4",
+   "text": "Dr. Rohan Mehta",
+   "id": "doctorsGrid"
+  },
+  {
+   "tag": "h4",
+   "text": "Dr. Neha Shah",
+   "id": "doctorsGrid"
+  },
+  {
+   "tag": "h2",
+   "text": "Smile Gallery",
+   "id": "gallery"
+  },
+  {
+   "tag": "h2",
+   "text": "Loved by Patients Across Andheri",
+   "id": "reviews"
+  },
+  {
+   "tag": "h2",
+   "text": "Your Treatment Journey",
+   "id": ""
+  },
+  {
+   "tag": "h4",
+   "text": "Consultation",
+   "id": ""
+  },
+  {
+   "tag": "h4",
+   "text": "Digital Diagnosis",
+   "id": ""
+  },
+  {
+   "tag": "h4",
+   "text": "Treatment Plan",
+   "id": ""
+  },
+  {
+   "tag": "h4",
+   "text": "Treatment",
+   "id": ""
+  },
+  {
+   "tag": "h4",
+   "text": "Follow-Up Care",
+   "id": ""
+  },
+  {
+   "tag": "h2",
+   "text": "Equipment That Sets Us Apart",
+   "id": "technology"
+  },
+  {
+   "tag": "h4",
+   "text": "Digital X-Ray",
+   "id": "technology"
+  },
+  {
+   "tag": "h4",
+   "text": "Intraoral Scanner",
+   "id": "technology"
+  },
+  {
+   "tag": "h4",
+   "text": "Laser Dentistry",
+   "id": "technology"
+  },
+  {
+   "tag": "h4",
+   "text": "3D Imaging",
+   "id": "technology"
+  },
+  {
+   "tag": "h2",
+   "text": "Frequently Asked Questions",
+   "id": "faq"
+  },
+  {
+   "tag": "h2",
+   "text": "Book Your Appointment",
+   "id": "appointment"
+  },
+  {
+   "tag": "h2",
+   "text": "Find Us in Andheri West",
+   "id": "location"
+  },
+  {
+   "tag": "h3",
+   "text": "Dental Emergency?",
+   "id": ""
+  },
+  {
+   "tag": "h4",
+   "text": "Quick Links",
+   "id": ""
+  },
+  {
+   "tag": "h4",
+   "text": "Contact",
+   "id": ""
+  },
+  {
+   "tag": "h4",
+   "text": "Legal",
+   "id": ""
+  }
+ ],
+ "links": [
+  {
+   "text": "Services",
+   "href": "https://my-smile-dental-clinic.vercel.app/#services",
+   "nav": true
+  },
+  {
+   "text": "Doctors",
+   "href": "https://my-smile-dental-clinic.vercel.app/#doctors",
+   "nav": true
+  },
+  {
+   "text": "Smile Gallery",
+   "href": "https://my-smile-dental-clinic.vercel.app/#gallery",
+   "nav": true
+  },
+  {
+   "text": "Reviews",
+   "href": "https://my-smile-dental-clinic.vercel.app/#reviews",
+   "nav": true
+  },
+  {
+   "text": "FAQ",
+   "href": "https://my-smile-dental-clinic.vercel.app/#faq",
+   "nav": true
+  },
+  {
+   "text": "Location",
+   "href": "https://my-smile-dental-clinic.vercel.app/#location",
+   "nav": true
+  },
+  {
+   "text": "Book Appointment",
+   "href": "https://my-smile-dental-clinic.vercel.app/#appointment",
+   "nav": true
+  },
+  {
+   "text": "Book Appointment",
+   "href": "https://my-smile-dental-clinic.vercel.app/#appointment",
+   "nav": false
+  },
+  {
+   "text": "Book Consultation",
+   "href": "https://my-smile-dental-clinic.vercel.app/#appointment",
+   "nav": false
+  },
+  {
+   "text": "Book Consultation",
+   "href": "https://my-smile-dental-clinic.vercel.app/#appointment",
+   "nav": false
+  },
+  {
+   "text": "Book Consultation",
+   "href": "https://my-smile-dental-clinic.vercel.app/#appointment",
+   "nav": false
+  },
+  {
+   "text": "📸",
+   "href": "https://my-smile-dental-clinic.vercel.app/#",
+   "nav": false
+  },
+  {
+   "text": "📘",
+   "href": "https://my-smile-dental-clinic.vercel.app/#",
+   "nav": false
+  },
+  {
+   "text": "▶️",
+   "href": "https://my-smile-dental-clinic.vercel.app/#",
+   "nav": false
+  },
+  {
+   "text": "Services",
+   "href": "https://my-smile-dental-clinic.vercel.app/#services",
+   "nav": false
+  },
+  {
+   "text": "Doctors",
+   "href": "https://my-smile-dental-clinic.vercel.app/#doctors",
+   "nav": false
+  },
+  {
+   "text": "Smile Gallery",
+   "href": "https://my-smile-dental-clinic.vercel.app/#gallery",
+   "nav": false
+  },
+  {
+   "text": "Book Appointment",
+   "href": "https://my-smile-dental-clinic.vercel.app/#appointment",
+   "nav": false
+  },
+  {
+   "text": "Get Directions",
+   "href": "https://my-smile-dental-clinic.vercel.app/#location",
+   "nav": false
+  },
+  {
+   "text": "Privacy Policy",
+   "href": "https://my-smile-dental-clinic.vercel.app/#",
+   "nav": false
+  },
+  {
+   "text": "Terms of Service",
+   "href": "https://my-smile-dental-clinic.vercel.app/#",
+   "nav": false
+  },
+  {
+   "text": "Sitemap",
+   "href": "https://my-smile-dental-clinic.vercel.app/#",
+   "nav": false
+  }
+ ]
+}

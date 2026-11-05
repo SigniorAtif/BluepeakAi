@@ -1,0 +1,368 @@
+{
+ "url": "https://glizz-beauty-school-demo.vercel.app/",
+ "title": "Glizz Gurukulam | Premium Beauty Education - Rajkot, Gujarat",
+ "items": [
+  {
+   "tag": "h1",
+   "text": "TURN YOUR PASSION INTO YOUR PROFESSION.",
+   "id": "home"
+  },
+  {
+   "tag": "h2",
+   "text": "LEARN THE CRAFT. BUILD THE CONFIDENCE. CREATE YOUR FUTURE.",
+   "id": "about"
+  },
+  {
+   "tag": "h2",
+   "text": "YOUR EDUCATION, ELEVATED.",
+   "id": "academy"
+  },
+  {
+   "tag": "h3",
+   "text": "LEARN BY DOING",
+   "id": "academy"
+  },
+  {
+   "tag": "h3",
+   "text": "PROFESSIONAL GUIDANCE",
+   "id": "academy"
+  },
+  {
+   "tag": "h3",
+   "text": "CAREER-FOCUSED SKILLS",
+   "id": "academy"
+  },
+  {
+   "tag": "h3",
+   "text": "PROFESSIONAL ENVIRONMENT",
+   "id": "academy"
+  },
+  {
+   "tag": "h2",
+   "text": "FIND YOUR BEAUTY CAREER PATH.",
+   "id": "courses"
+  },
+  {
+   "tag": "h3",
+   "text": "Makeup Artistry",
+   "id": "courses"
+  },
+  {
+   "tag": "h3",
+   "text": "Hair Styling",
+   "id": "courses"
+  },
+  {
+   "tag": "h3",
+   "text": "Skincare",
+   "id": "courses"
+  },
+  {
+   "tag": "h3",
+   "text": "Nail Technology",
+   "id": "courses"
+  },
+  {
+   "tag": "h3",
+   "text": "Cosmetology",
+   "id": "courses"
+  },
+  {
+   "tag": "h3",
+   "text": "Media Makeup",
+   "id": "courses"
+  },
+  {
+   "tag": "h2",
+   "text": "WHICH BEAUTY PATH IS RIGHT FOR YOU?",
+   "id": ""
+  },
+  {
+   "tag": "h2",
+   "text": "DON'T JUST LEARN. EXPERIENCE THE CRAFT.",
+   "id": ""
+  },
+  {
+   "tag": "h2",
+   "text": "CREATIVITY IN ACTION.",
+   "id": "student-work"
+  },
+  {
+   "tag": "h2",
+   "text": "THEIR JOURNEY. THEIR WORDS.",
+   "id": "reviews"
+  },
+  {
+   "tag": "h3",
+   "text": "5.0",
+   "id": "reviews"
+  },
+  {
+   "tag": "h2",
+   "text": "WHAT WILL YOU CREATE WITH YOUR SKILLS?",
+   "id": ""
+  },
+  {
+   "tag": "h4",
+   "text": "MAKEUP ARTIST",
+   "id": ""
+  },
+  {
+   "tag": "h4",
+   "text": "HAIR PROFESSIONAL",
+   "id": ""
+  },
+  {
+   "tag": "h4",
+   "text": "BEAUTY PROFESSIONAL",
+   "id": ""
+  },
+  {
+   "tag": "h4",
+   "text": "NAIL TECHNICIAN",
+   "id": ""
+  },
+  {
+   "tag": "h4",
+   "text": "SKINCARE PROFESSIONAL",
+   "id": ""
+  },
+  {
+   "tag": "h4",
+   "text": "BEAUTY ENTREPRENEUR",
+   "id": ""
+  },
+  {
+   "tag": "h2",
+   "text": "YOUR NEXT CHAPTER STARTS HERE.",
+   "id": ""
+  },
+  {
+   "tag": "h3",
+   "text": "VISIT GLIZZ GURUKULAM",
+   "id": "contact"
+  },
+  {
+   "tag": "h2",
+   "text": "BUILD YOUR CRAFT. BUILD YOUR FUTURE.",
+   "id": ""
+  },
+  {
+   "tag": "h4",
+   "text": "QUICK LINKS",
+   "id": ""
+  },
+  {
+   "tag": "h4",
+   "text": "PROGRAMS",
+   "id": ""
+  },
+  {
+   "tag": "h4",
+   "text": "CONNECT",
+   "id": ""
+  }
+ ],
+ "links": [
+  {
+   "text": "GLIZZ GURUKULAM",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#",
+   "nav": true
+  },
+  {
+   "text": "HOME",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#home",
+   "nav": true
+  },
+  {
+   "text": "ABOUT",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#about",
+   "nav": true
+  },
+  {
+   "text": "COURSES",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#courses",
+   "nav": true
+  },
+  {
+   "text": "ACADEMY",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#academy",
+   "nav": true
+  },
+  {
+   "text": "STUDENT WORK",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#student-work",
+   "nav": true
+  },
+  {
+   "text": "REVIEWS",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#reviews",
+   "nav": true
+  },
+  {
+   "text": "BOOK COUNSELLING",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#contact",
+   "nav": true
+  },
+  {
+   "text": "Home",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#home",
+   "nav": false
+  },
+  {
+   "text": "About",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#about",
+   "nav": false
+  },
+  {
+   "text": "Courses",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#courses",
+   "nav": false
+  },
+  {
+   "text": "Academy",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#academy",
+   "nav": false
+  },
+  {
+   "text": "Student Work",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#student-work",
+   "nav": false
+  },
+  {
+   "text": "Reviews",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#reviews",
+   "nav": false
+  },
+  {
+   "text": "Contact",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#contact",
+   "nav": false
+  },
+  {
+   "text": "EXPLORE COURSES",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#courses",
+   "nav": false
+  },
+  {
+   "text": "BOOK FREE COUNSELLING",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#contact",
+   "nav": false
+  },
+  {
+   "text": "DISCOVER OUR ACADEMY",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#academy",
+   "nav": false
+  },
+  {
+   "text": "EXPLORE COURSE",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#contact",
+   "nav": false
+  },
+  {
+   "text": "EXPLORE COURSE",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#contact",
+   "nav": false
+  },
+  {
+   "text": "EXPLORE COURSE",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#contact",
+   "nav": false
+  },
+  {
+   "text": "EXPLORE COURSE",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#contact",
+   "nav": false
+  },
+  {
+   "text": "EXPLORE COURSE",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#contact",
+   "nav": false
+  },
+  {
+   "text": "EXPLORE COURSE",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#contact",
+   "nav": false
+  },
+  {
+   "text": "BOOK FREE COUNSELLING",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#contact",
+   "nav": false
+  },
+  {
+   "text": "Courses",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#courses",
+   "nav": false
+  },
+  {
+   "text": "About",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#about",
+   "nav": false
+  },
+  {
+   "text": "Academy",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#academy",
+   "nav": false
+  },
+  {
+   "text": "Student Work",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#student-work",
+   "nav": false
+  },
+  {
+   "text": "Reviews",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#reviews",
+   "nav": false
+  },
+  {
+   "text": "Contact",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#contact",
+   "nav": false
+  },
+  {
+   "text": "Makeup Artistry",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#courses",
+   "nav": false
+  },
+  {
+   "text": "Hair Styling",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#courses",
+   "nav": false
+  },
+  {
+   "text": "Skincare",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#courses",
+   "nav": false
+  },
+  {
+   "text": "Nail Technology",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#courses",
+   "nav": false
+  },
+  {
+   "text": "Cosmetology",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#courses",
+   "nav": false
+  },
+  {
+   "text": "Media Makeup",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#courses",
+   "nav": false
+  },
+  {
+   "text": "Get Directions",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#contact",
+   "nav": false
+  },
+  {
+   "text": "Book Counselling",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#contact",
+   "nav": false
+  },
+  {
+   "text": "💬 Chat With Admissions",
+   "href": "https://glizz-beauty-school-demo.vercel.app/#contact",
+   "nav": false
+  }
+ ]
+}

@@ -1,0 +1,298 @@
+{
+ "url": "https://restaurant-gamma-ivory.vercel.app/",
+ "title": "The Restaurant | Family Dining in Vadodara",
+ "items": [
+  {
+   "tag": "h1",
+   "text": "Welcome to The Restaurant",
+   "id": "home"
+  },
+  {
+   "tag": "h2",
+   "text": "Good food brings families closer.",
+   "id": "about"
+  },
+  {
+   "tag": "h4",
+   "text": "Fresh Ingredients",
+   "id": "about"
+  },
+  {
+   "tag": "h4",
+   "text": "Hygienic Kitchen",
+   "id": "about"
+  },
+  {
+   "tag": "h4",
+   "text": "Comfortable Seating",
+   "id": "about"
+  },
+  {
+   "tag": "h4",
+   "text": "Friendly Staff",
+   "id": "about"
+  },
+  {
+   "tag": "h4",
+   "text": "Affordable Pricing",
+   "id": "about"
+  },
+  {
+   "tag": "h4",
+   "text": "Great for Groups",
+   "id": "about"
+  },
+  {
+   "tag": "h2",
+   "text": "Made fresh. Served with love.",
+   "id": "menu"
+  },
+  {
+   "tag": "h3",
+   "text": "Paneer Butter Masala",
+   "id": "menuGrid"
+  },
+  {
+   "tag": "h3",
+   "text": "Dal Fry",
+   "id": "menuGrid"
+  },
+  {
+   "tag": "h3",
+   "text": "Veg Kolhapuri",
+   "id": "menuGrid"
+  },
+  {
+   "tag": "h3",
+   "text": "Butter Naan",
+   "id": "menuGrid"
+  },
+  {
+   "tag": "h3",
+   "text": "Hakka Noodles",
+   "id": "menuGrid"
+  },
+  {
+   "tag": "h3",
+   "text": "Manchurian",
+   "id": "menuGrid"
+  },
+  {
+   "tag": "h3",
+   "text": "Fried Rice",
+   "id": "menuGrid"
+  },
+  {
+   "tag": "h3",
+   "text": "Schezwan Rice",
+   "id": "menuGrid"
+  },
+  {
+   "tag": "h3",
+   "text": "Margherita",
+   "id": "menuGrid"
+  },
+  {
+   "tag": "h3",
+   "text": "Farm Fresh",
+   "id": "menuGrid"
+  },
+  {
+   "tag": "h3",
+   "text": "Paneer Pizza",
+   "id": "menuGrid"
+  },
+  {
+   "tag": "h3",
+   "text": "Classic Burger",
+   "id": "menuGrid"
+  },
+  {
+   "tag": "h3",
+   "text": "Grilled Sandwich",
+   "id": "menuGrid"
+  },
+  {
+   "tag": "h3",
+   "text": "French Fries",
+   "id": "menuGrid"
+  },
+  {
+   "tag": "h3",
+   "text": "Cold Coffee",
+   "id": "menuGrid"
+  },
+  {
+   "tag": "h3",
+   "text": "Fresh Lime Soda",
+   "id": "menuGrid"
+  },
+  {
+   "tag": "h3",
+   "text": "Soft Drinks",
+   "id": "menuGrid"
+  },
+  {
+   "tag": "h2",
+   "text": "A dining experience made for you.",
+   "id": "why"
+  },
+  {
+   "tag": "h3",
+   "text": "Fresh Ingredients",
+   "id": "why"
+  },
+  {
+   "tag": "h3",
+   "text": "Experienced Chefs",
+   "id": "why"
+  },
+  {
+   "tag": "h3",
+   "text": "Hygienic Kitchen",
+   "id": "why"
+  },
+  {
+   "tag": "h3",
+   "text": "Fast Service",
+   "id": "why"
+  },
+  {
+   "tag": "h3",
+   "text": "Affordable Pricing",
+   "id": "why"
+  },
+  {
+   "tag": "h3",
+   "text": "Family Friendly",
+   "id": "why"
+  },
+  {
+   "tag": "h3",
+   "text": "Unlimited Dinner",
+   "id": "why"
+  },
+  {
+   "tag": "h3",
+   "text": "Easy Parking",
+   "id": "why"
+  },
+  {
+   "tag": "h2",
+   "text": "A feast for the eyes.",
+   "id": "gallery"
+  },
+  {
+   "tag": "h2",
+   "text": "Loved by food lovers.",
+   "id": "reviews"
+  },
+  {
+   "tag": "h2",
+   "text": "Frequently asked questions.",
+   "id": "faq"
+  },
+  {
+   "tag": "h2",
+   "text": "Let's make your meal memorable.",
+   "id": "contact"
+  },
+  {
+   "tag": "h3",
+   "text": "Reserve your table",
+   "id": "contact"
+  },
+  {
+   "tag": "h3",
+   "text": "Quick Links",
+   "id": ""
+  },
+  {
+   "tag": "h3",
+   "text": "Opening Hours",
+   "id": ""
+  }
+ ],
+ "links": [
+  {
+   "text": "TR The Restaurant",
+   "href": "https://restaurant-gamma-ivory.vercel.app/#home",
+   "nav": true
+  },
+  {
+   "text": "Home",
+   "href": "https://restaurant-gamma-ivory.vercel.app/#home",
+   "nav": true
+  },
+  {
+   "text": "About",
+   "href": "https://restaurant-gamma-ivory.vercel.app/#about",
+   "nav": true
+  },
+  {
+   "text": "Menu",
+   "href": "https://restaurant-gamma-ivory.vercel.app/#menu",
+   "nav": true
+  },
+  {
+   "text": "Gallery",
+   "href": "https://restaurant-gamma-ivory.vercel.app/#gallery",
+   "nav": true
+  },
+  {
+   "text": "Why Us",
+   "href": "https://restaurant-gamma-ivory.vercel.app/#why",
+   "nav": true
+  },
+  {
+   "text": "Reviews",
+   "href": "https://restaurant-gamma-ivory.vercel.app/#reviews",
+   "nav": true
+  },
+  {
+   "text": "FAQ",
+   "href": "https://restaurant-gamma-ivory.vercel.app/#faq",
+   "nav": true
+  },
+  {
+   "text": "Contact",
+   "href": "https://restaurant-gamma-ivory.vercel.app/#contact",
+   "nav": true
+  },
+  {
+   "text": "View Menu",
+   "href": "https://restaurant-gamma-ivory.vercel.app/#menu",
+   "nav": false
+  },
+  {
+   "text": "Reserve a Table",
+   "href": "https://restaurant-gamma-ivory.vercel.app/#contact",
+   "nav": false
+  },
+  {
+   "text": "TR The Restaurant",
+   "href": "https://restaurant-gamma-ivory.vercel.app/#home",
+   "nav": false
+  },
+  {
+   "text": "Menu",
+   "href": "https://restaurant-gamma-ivory.vercel.app/#menu",
+   "nav": false
+  },
+  {
+   "text": "Gallery",
+   "href": "https://restaurant-gamma-ivory.vercel.app/#gallery",
+   "nav": false
+  },
+  {
+   "text": "Reviews",
+   "href": "https://restaurant-gamma-ivory.vercel.app/#reviews",
+   "nav": false
+  },
+  {
+   "text": "Contact",
+   "href": "https://restaurant-gamma-ivory.vercel.app/#contact",
+   "nav": false
+  }
+ ]
+}

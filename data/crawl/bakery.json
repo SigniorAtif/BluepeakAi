@@ -1,0 +1,153 @@
+{
+ "url": "https://bakery-mu-eosin.vercel.app/",
+ "title": "Blush & Batter — Handcrafted Celebration Cakes",
+ "items": [
+  {
+   "tag": "h1",
+   "text": "Cakes that feel like a hug.",
+   "id": ""
+  },
+  {
+   "tag": "h2",
+   "text": "Started in a home kitchen. Still runs like one.",
+   "id": ""
+  },
+  {
+   "tag": "h2",
+   "text": "Our most-loved cakes",
+   "id": "cakes"
+  },
+  {
+   "tag": "h3",
+   "text": "Rose Pistachio Bloom",
+   "id": "cakes"
+  },
+  {
+   "tag": "h3",
+   "text": "Salted Caramel Velvet",
+   "id": "cakes"
+  },
+  {
+   "tag": "h3",
+   "text": "Wild Berry Chantilly",
+   "id": "cakes"
+  },
+  {
+   "tag": "h3",
+   "text": "Espresso Hazelnut Swirl",
+   "id": "cakes"
+  },
+  {
+   "tag": "h3",
+   "text": "Lemon Elderflower Cloud",
+   "id": "cakes"
+  },
+  {
+   "tag": "h3",
+   "text": "Dark Chocolate Ganache Heart",
+   "id": "cakes"
+  },
+  {
+   "tag": "h2",
+   "text": "How your cake comes together",
+   "id": "process"
+  },
+  {
+   "tag": "h3",
+   "text": "Pick flavor & size",
+   "id": "process"
+  },
+  {
+   "tag": "h3",
+   "text": "Choose date & slot",
+   "id": "process"
+  },
+  {
+   "tag": "h3",
+   "text": "We pipe & confirm",
+   "id": "process"
+  },
+  {
+   "tag": "h2",
+   "text": "Book a cake",
+   "id": "book"
+  },
+  {
+   "tag": "h2",
+   "text": "From our customers",
+   "id": "reviews"
+  },
+  {
+   "tag": "h4",
+   "text": "EXPLORE",
+   "id": "visit"
+  },
+  {
+   "tag": "h4",
+   "text": "VISIT",
+   "id": "visit"
+  },
+  {
+   "tag": "h4",
+   "text": "CONTACT",
+   "id": "visit"
+  }
+ ],
+ "links": [
+  {
+   "text": "Cakes",
+   "href": "https://bakery-mu-eosin.vercel.app/#cakes",
+   "nav": true
+  },
+  {
+   "text": "How it works",
+   "href": "https://bakery-mu-eosin.vercel.app/#process",
+   "nav": true
+  },
+  {
+   "text": "Reviews",
+   "href": "https://bakery-mu-eosin.vercel.app/#reviews",
+   "nav": true
+  },
+  {
+   "text": "Visit us",
+   "href": "https://bakery-mu-eosin.vercel.app/#visit",
+   "nav": true
+  },
+  {
+   "text": "Book a Cake",
+   "href": "https://bakery-mu-eosin.vercel.app/#book",
+   "nav": true
+  },
+  {
+   "text": "Book Your Cake",
+   "href": "https://bakery-mu-eosin.vercel.app/#book",
+   "nav": false
+  },
+  {
+   "text": "See the Menu",
+   "href": "https://bakery-mu-eosin.vercel.app/#cakes",
+   "nav": false
+  },
+  {
+   "text": "Cakes",
+   "href": "https://bakery-mu-eosin.vercel.app/#cakes",
+   "nav": false
+  },
+  {
+   "text": "How it works",
+   "href": "https://bakery-mu-eosin.vercel.app/#process",
+   "nav": false
+  },
+  {
+   "text": "Book a cake",
+   "href": "https://bakery-mu-eosin.vercel.app/#book",
+   "nav": false
+  },
+  {
+   "text": "Reviews",
+   "href": "https://bakery-mu-eosin.vercel.app/#reviews",
+   "nav": false
+  }
+ ]
+}

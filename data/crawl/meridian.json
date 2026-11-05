@@ -1,0 +1,223 @@
+{
+ "url": "https://meridian-cross-law-firm-1.vercel.app/",
+ "title": "Meridian & Cross — Advocates & Solicitors",
+ "items": [
+  {
+   "tag": "h1",
+   "text": "Judgment you can rely on, when it matters most.",
+   "id": ""
+  },
+  {
+   "tag": "h2",
+   "text": "Practice Areas",
+   "id": "practice"
+  },
+  {
+   "tag": "h3",
+   "text": "Corporate & Commercial",
+   "id": "practice"
+  },
+  {
+   "tag": "h3",
+   "text": "Litigation & Dispute Resolution",
+   "id": "practice"
+  },
+  {
+   "tag": "h3",
+   "text": "Real Estate & Property",
+   "id": "practice"
+  },
+  {
+   "tag": "h3",
+   "text": "Family & Matrimonial",
+   "id": "practice"
+  },
+  {
+   "tag": "h3",
+   "text": "Employment & Labor",
+   "id": "practice"
+  },
+  {
+   "tag": "h3",
+   "text": "Intellectual Property",
+   "id": "practice"
+  },
+  {
+   "tag": "h3",
+   "text": "Estate & Wealth Planning",
+   "id": "practice"
+  },
+  {
+   "tag": "h3",
+   "text": "Regulatory & Compliance",
+   "id": "practice"
+  },
+  {
+   "tag": "h3",
+   "text": "Criminal Defense",
+   "id": "practice"
+  },
+  {
+   "tag": "h2",
+   "text": "How we practice law.",
+   "id": "about"
+  },
+  {
+   "tag": "h4",
+   "text": "Direct partner involvement",
+   "id": "about"
+  },
+  {
+   "tag": "h4",
+   "text": "Plain-language counsel",
+   "id": "about"
+  },
+  {
+   "tag": "h4",
+   "text": "Discretion as standard",
+   "id": "about"
+  },
+  {
+   "tag": "h4",
+   "text": "Transparent fee structures",
+   "id": "about"
+  },
+  {
+   "tag": "h2",
+   "text": "Attorneys",
+   "id": "attorneys"
+  },
+  {
+   "tag": "h4",
+   "text": "Eleanor Meridian",
+   "id": "attorneys"
+  },
+  {
+   "tag": "h4",
+   "text": "Jonathan Cross",
+   "id": "attorneys"
+  },
+  {
+   "tag": "h4",
+   "text": "Priya Raghavan",
+   "id": "attorneys"
+  },
+  {
+   "tag": "h4",
+   "text": "Marcus Delacroix",
+   "id": "attorneys"
+  },
+  {
+   "tag": "h2",
+   "text": "Representative Results",
+   "id": "results"
+  },
+  {
+   "tag": "h2",
+   "text": "What clients say.",
+   "id": ""
+  },
+  {
+   "tag": "h2",
+   "text": "Schedule a consultation.",
+   "id": "contact"
+  },
+  {
+   "tag": "h4",
+   "text": "Main Office",
+   "id": "contact"
+  },
+  {
+   "tag": "h4",
+   "text": "General Inquiries",
+   "id": "contact"
+  },
+  {
+   "tag": "h3",
+   "text": "Request a Consultation",
+   "id": "contact"
+  }
+ ],
+ "links": [
+  {
+   "text": "Practice Areas",
+   "href": "https://meridian-cross-law-firm-1.vercel.app/#practice",
+   "nav": true
+  },
+  {
+   "text": "About the Firm",
+   "href": "https://meridian-cross-law-firm-1.vercel.app/#about",
+   "nav": true
+  },
+  {
+   "text": "Attorneys",
+   "href": "https://meridian-cross-law-firm-1.vercel.app/#attorneys",
+   "nav": true
+  },
+  {
+   "text": "Results",
+   "href": "https://meridian-cross-law-firm-1.vercel.app/#results",
+   "nav": true
+  },
+  {
+   "text": "Contact",
+   "href": "https://meridian-cross-law-firm-1.vercel.app/#contact",
+   "nav": true
+  },
+  {
+   "text": "SCHEDULE A CONSULTATION",
+   "href": "https://meridian-cross-law-firm-1.vercel.app/#contact",
+   "nav": true
+  },
+  {
+   "text": "REQUEST A CONSULTATION",
+   "href": "https://meridian-cross-law-firm-1.vercel.app/#contact",
+   "nav": false
+  },
+  {
+   "text": "VIEW PRACTICE AREAS",
+   "href": "https://meridian-cross-law-firm-1.vercel.app/#practice",
+   "nav": false
+  },
+  {
+   "text": "SUBMIT REQUEST",
+   "href": "https://meridian-cross-law-firm-1.vercel.app/#",
+   "nav": false
+  },
+  {
+   "text": "About Us",
+   "href": "https://meridian-cross-law-firm-1.vercel.app/#about",
+   "nav": false
+  },
+  {
+   "text": "Attorneys",
+   "href": "https://meridian-cross-law-firm-1.vercel.app/#attorneys",
+   "nav": false
+  },
+  {
+   "text": "Results",
+   "href": "https://meridian-cross-law-firm-1.vercel.app/#results",
+   "nav": false
+  },
+  {
+   "text": "Corporate & Commercial",
+   "href": "https://meridian-cross-law-firm-1.vercel.app/#practice",
+   "nav": false
+  },
+  {
+   "text": "Litigation",
+   "href": "https://meridian-cross-law-firm-1.vercel.app/#practice",
+   "nav": false
+  },
+  {
+   "text": "Family & Estate",
+   "href": "https://meridian-cross-law-firm-1.vercel.app/#practice",
+   "nav": false
+  },
+  {
+   "text": "Schedule a Consultation",
+   "href": "https://meridian-cross-law-firm-1.vercel.app/#contact",
+   "nav": false
+  }
+ ]
+}
