@@ -179,7 +179,6 @@ export default function JourneyField() {
       raf = 0;
       const dt = Math.min(0.05, (now - last) / 1000);
       last = now;
-      const t = now / 1000;
       const sy = window.scrollY;
       fade = Math.max(0, 1 - sy / (h * 0.85));
       box.style.transform = `translate3d(0,${sy * 0.35}px,0)`;
@@ -359,7 +358,8 @@ export default function JourneyField() {
           {s.label}
         </span>
       ))}
-      <a ref={tip} className="bp-fieldtip" href="/services" tabIndex={-1}>
+      {/* The hovered stop sets href before the tip shows. */}
+      <a ref={tip} className="bp-fieldtip" tabIndex={-1}>
         <span />
         <span />
       </a>
